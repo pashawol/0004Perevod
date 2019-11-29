@@ -18,7 +18,7 @@ mixin s-about()
 						mixin col(i,t)
 							+e.col.col-lg-3.col-md-4.col-6
 								+e.img-wrap
-									img.res-i(src=`img/@2x/about-i-${i}.png`, alt="")
+									img.res-i.lazy(src="# " data-src=`img/@2x/about-i-${i}.png`, alt="")
 								block
 						+col("1")
 							+e.text В&nbsp;штате более 50 специалистов
