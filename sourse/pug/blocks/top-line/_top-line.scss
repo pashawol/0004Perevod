@@ -1,6 +1,93 @@
 .top-line {
+  position: relative;
+  z-index: 4;
+  background-color: #f5f1ee;
+  .row{
+    position: relative;
+  }
+  .col-main{
+    padding-top: rem(13);
+    padding-bottom: rem(13);
+    @include media-breakpoint-up(lg) {
 
-	
+      position: relative;
+    }
+    z-index: 2;
+    &::before{
+      @include media-breakpoint-up(xl) {
+        
+        left: 15px;
+        }
+        @include media-breakpoint-up(lg) {
+
+          content: '';
+          z-index: -1;
+          position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background-color: #ffffff;
+    }
+    }
+  }
+  .row{
+    align-items: center;
+  }
+ul{
+  margin-bottom: 0;
+  list-style-type: none;
+  @include media-breakpoint-up(lg) {
+
+    display: flex;
+    text-align: left;
+  }
+  text-align: center;
+  @include roww(12);
+  li{
+
+  }
+  a{
+    @extend .text-body;
+    font-weight: 500;
+    line-height: 1.13;
+  }
+}
+&__tel{
+  font-weight: 600;
+line-height: 1.13;
+}
+  position: relative;
+  &__aside{
+    
+@include media-breakpoint-down(xs) {
+  img{
+    max-width: 165px;
+  }
+}
+    @include media-breakpoint-up(md) {
+    position: absolute;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+    }
+    padding-bottom: rem(22);
+    @include media-breakpoint-up(xl) {
+
+    //  /*  */ left: 15px;
+  }
+  left: 0;
+  top: 0;
+  padding-top: rem(22);
+  text-align: center;
+  }
+
+  &__modal-link{
+    display: inline-block;
+    margin-top: rem(45);
+    @extend .text-body;
+  }
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -20,16 +107,41 @@
 
 @include media-breakpoint-only(sm) {}
 
-@include media-breakpoint-only(md) {}
+@include media-breakpoint-only(md) {
+  &__col{
+    padding: 0;
+    a{
+      display: inline-block;
+      margin-bottom: rem(5);
+    }
+    // position: absolute;
+    // left: 0;
+    // top: 100%;
+  }
+}
 
-@include media-breakpoint-only(lg) {}
+@include media-breakpoint-only(lg) {
+  ul{
 
-@include media-breakpoint-only(xl) {}
+    @include roww(4);
+  }
+  // ul,
+  .col-main .row{
+    @include roww(4);
+    justify-content: flex-end;
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  
+}
 
 // 
 @include media-breakpoint-down(xl) {}
 
-@include media-breakpoint-down(lg) {}
+@include media-breakpoint-down(lg) {
+  
+}
 
 @include media-breakpoint-down(md) {}
 

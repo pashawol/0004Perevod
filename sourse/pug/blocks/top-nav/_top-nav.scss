@@ -1,31 +1,29 @@
 .top-nav {
-	padding-top: 15px;
-	// position: absolute;
-	top: 100%;
-	// @include clearfix;ss
-	z-index: 20;
-	padding-top: 3px;
-	@include mt;
-	padding-bottom: 10px;
-	top: 0;
+	padding-top: rem(20);
+	position: absolute;
+	
 	left: 0;
+	// top: 0;
 	width: 100%;
-
-	&.fixed {
-		width: 100vw;
-		bottom: auto;
-		margin-top: 0;
-		background-color: #fff;
-	}
-
-	&__nav {
+	z-index: 10;
+	ul{
+		margin-bottom: 0;
+		display: flex;
+		list-style-type: none;
 		text-align: center;
-		list-style-type: none;
+		@include roww(12);
+		
+	@include media-breakpoint-only(lg) {
+		justify-content: space-between;
 	}
-
-	&__item {
-		display: inline-block;
-		list-style-type: none;
+		li{
+	
+		}
+		a{
+			@extend .text-white;
+			font-weight: 500;
+			line-height: 1.13;
+		}
 	}
 
 	// 

@@ -34,13 +34,35 @@ mixin modal()
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
 			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
+				+e.title--js
 			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
+			+input("Ваш телефон*","tel")(required)
 			//- +input("email","Ваше email")(required)
 			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
+			+e.BUTTON.btn(type="submit" )  Отправить
+				+icon("arrow-right")
 		// #modal-call
+		
+		+form-wrap()(id="modal-q" class="  modal-win modal-form" )
+			.text-center
+				+e.title--js
+			+input("Ваше Имя")(required) 
+			+input("Ваш телефон*","tel")(required)
+			+input("Ваш вопрос*","textarea")(required)
+			//- +input("email","Ваше email")(required)
+			//- +text( "Комментарий")
+			+polite()
+			+e.BUTTON.btn(type="submit" ) Задать вопрос
+				+icon("arrow-right")
+		// #modal-call
+		
+		+b.form-wrap(id="modal-thanks" class="  modal-win modal-form" )
+			.text-center
+				+e.title Бесплатная консультация 
+				.text-primary.fw-500 Спасибо за&nbsp;оставленную заявку!
+				+e.small Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время
+			+e.BUTTON.btn.modal-close-js(type="button" ) Ок
+		// #modal-thanks
+
 	// modal

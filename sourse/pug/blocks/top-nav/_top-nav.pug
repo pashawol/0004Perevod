@@ -1,19 +1,25 @@
 
 mixin mob-mnu()
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	//- +b.toggle-menu-mobile--js.d-lg-none
+	//- 	span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
-			.text-right
+			+mnu2()
+			+col-main()
+			a.top-line__modal-link(href="#")
+				img.res-i(src="img/svg/mail_icon.svg", alt="")
+				div Обратная связь
+	
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-md-block
 		.container
-			+mnu()
+			.row
+				.col-aside.col-3
+				.col-main.col
+					+mnu2()
 					
 	// end top-nav

@@ -1,0 +1,43 @@
+mixin s-about()
+	// start s-about
+	+b.SECTION.s-about.section#s-about&attributes(attributes)
+		.container
+			+b.section-title
+				h2 О бюро
+				
+			.row
+				+b.col-aside.col-md-3
+					+e.inner
+						p Perevod.ru&nbsp;&mdash; бюро переводов широкого профиля.
+						p Мы&nbsp;оказываем услуги по&nbsp;письменному и&nbsp;устному переводу, а&nbsp;также ряд дополнительных услуг по&nbsp;редактированию, форматированию и&nbsp;верстке переведенных текстов, нотариальному заверению переводов, и&nbsp;озвучиванию аудио- и&nbsp;видеоматериалов
+						.d-none.d-md-block
+							+e.btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
+									+icon("arrow-right")
+				.col-main.col
+					.row
+						mixin col(i,t)
+							+e.col.col-lg-3.col-md-4.col-6
+								+e.img-wrap
+									img.res-i(src=`img/@2x/about-i-${i}.png`, alt="")
+								block
+						+col("1")
+							+e.text В&nbsp;штате более 50 специалистов
+						+col("2")
+							+e.text Каждый специалист имеет по&nbsp;меньшей мере 10&nbsp;лет переводческого опыта
+						+col("3")
+							+e.text Работаем более чем с&nbsp;18&nbsp;европейскими и&nbsp;восточными языками
+						+col("4")
+							+e.text Большой опыт &mdash; более 19&nbsp;лет на&nbsp;рынке переводческих услуг
+						+col("5")
+							+e.text 27&nbsp;видов перевода
+						+col("6")
+							+e.text Гибкая система скидок &mdash; чем больше заказываете, тем меньше платите
+						+col("7")
+							+e.text Мы&nbsp;сохраним конфиденциальность вашей информации
+						+col("8")
+							+e.text Бесплатное выполнение тестовых переводов*
+							.small * Уточняйте у менеджера
+					.d-md-none
+						a.col-aside__btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
+								+icon("arrow-right")
+	// end s-about

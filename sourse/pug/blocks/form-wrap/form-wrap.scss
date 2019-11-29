@@ -1,4 +1,14 @@
 .form-wrap{
+	
+	&__title{
+		text-align: center;
+		@include rfs(rem(36));
+		font-weight: bold;
+		line-height: 0.89;
+	// Text style for "Бесплатная"
+	letter-spacing: -0.36px;
+	margin-bottom: rem(33);
+	}
  	&__input-wrap{
 			// @extend .form-group;
 			
@@ -6,15 +16,37 @@
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
-		 resize: none;
+		//  resize: none;
  	}
  	&__btn{
- 		cursor: pointer;
+		 margin-top: rem(40);
+		 cursor: pointer;
+		 @extend .btn;
+		 @extend .btn-flex;
+		// display: flex;
+		width: calc(100% + #{rem(38 *2)});
+		 @extend .btn-primary;
+		 margin-left: rem(-38);
+		 margin-right: rem(-38);
+		 padding-left: rem(38);
+		 padding-right: rem(38);
+		 &.modal-close-js{
+			 justify-content: center;
+		 }
  	}
  	label{
  		width: 100%;
  		display: block;
- 	}
+	 }
+	 &__small{
+		text-align: center;
+		line-height: 1.29;
+		padding-top: rem(20);
+	 }
+	 textarea{
+
+		height: rem(113);
+	 }
 }
 
 

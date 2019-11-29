@@ -19,7 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -27,33 +27,41 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-			</div>
 			<div class="menu-mobile menu-mobile--js d-lg-none">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Письменный перевод</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Услуги  </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Устный перевод</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Подбор септика   </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Срочный перевод</a>
 						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
+						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Заверение и легализация</a>
 						</li>
 					</ul>
-					<div class="text-right"></div>
+					<div class="menu-mobile__col col-main col-lg">
+						<div class="row">
+							<div class="col-lg">
+								<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">О бюро</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Стоимость услуг</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Доставка и оплата</a>
+									</li>
+									<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
+									</li>
+								</ul>
+							</div>
+							<div class="col-lg-auto text-center"><a class="menu-mobile__tel" href="tel:8(916)657-88-39">8 (916) 657-88-39</a>
+							</div>
+							<div class="col-lg-auto text-center"><a class="menu-mobile__tel" href="tel:8(495)789-68-40">8 (495) 789-68-40</a>
+							</div>
+						</div>
+					</div><a class="top-line__modal-link" href="#"><img class="res-i" src="img/svg/mail_icon.svg" alt=""/>
+						<div>Обратная связь</div></a>
 				</div>
 			</div>
 			<!--  мобильное меню-->
@@ -62,69 +70,499 @@
 				<!-- start .top-line-->
 				<div class="top-line block-with-lazy">
 					<div class="container">
-						<div class="row">top-line</div>
+						<div class="toggle-menu-mobile toggle-menu-mobile--js d-md-none"><span></span>
+						</div>
+						<div class="row">
+							<div class="col-aside col-md-3">
+								<div class="top-line__aside">
+									<div class="top-line__logo"><img class="res-i" src="img/svg/logo.svg" alt=""/>
+									</div>
+									<div class="top-line__col col-main col-lg d-lg-none d-none d-md-block">
+										<div class="row">
+											<div class="col-lg">
+												<ul class="top-line__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+													<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">О бюро</a>
+													</li>
+													<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Стоимость услуг</a>
+													</li>
+													<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Доставка и оплата</a>
+													</li>
+													<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Контакты </a>
+													</li>
+												</ul>
+											</div>
+											<div class="col-lg-auto text-center"><a class="top-line__tel" href="tel:8(916)657-88-39">8 (916) 657-88-39</a>
+											</div>
+											<div class="col-lg-auto text-center"><a class="top-line__tel" href="tel:8(495)789-68-40">8 (495) 789-68-40</a>
+											</div>
+										</div>
+									</div>
+									<div class="d-none d-md-block"><a class="top-line__modal-link" href="#"><img class="res-i" src="img/svg/mail_icon.svg" alt=""/>
+										<div>Обратная связь</div></a>
+									</div>
+								</div>
+							</div>
+							<div class="top-line__col col-main col-lg d-none d-lg-block">
+								<div class="row">
+									<div class="col-lg">
+										<ul class="top-line__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+											<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">О бюро</a>
+											</li>
+											<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Стоимость услуг</a>
+											</li>
+											<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Доставка и оплата</a>
+											</li>
+											<li class="top-line__item" itemprop="item"><a class="top-line__link" href="#" itemprop="url">Контакты </a>
+											</li>
+										</ul>
+									</div>
+									<div class="col-lg-auto text-center"><a class="top-line__tel" href="tel:8(916)657-88-39">8 (916) 657-88-39</a>
+									</div>
+									<div class="col-lg-auto text-center"><a class="top-line__tel" href="tel:8(495)789-68-40">8 (495) 789-68-40</a>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end .top-line-->
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav block-with-lazy d-none d-md-block">
 					<div class="container">
-						<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="/" itemprop="url">Главная</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Услуги  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Подбор септика   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Акции </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> О компании  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Доставка и оплата </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Клиентам  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Наши работы   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты </a>
-							</li>
-						</ul>
+						<div class="row">
+							<div class="col-aside col-3"></div>
+							<div class="col-main col">
+								<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Письменный перевод</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Устный перевод</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Срочный перевод</a>
+									</li>
+									<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Заверение и легализация</a>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
+				<!-- start header-block-->
+				<div class="header-block" id="header-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-aside col-3 d-none d-md-block">
+								<div class="drop-block-wrap">
+									<div class="drop-block d-none d-lg-block">
+										<div class="drop-block__title">Рассчитайте стоимость перевода
+										</div>
+										<div class="drop-block__inner">
+											<form class="dropzone" action="/file-upload" enctype="multipart/form-data"></form>
+											<div class="fallback">
+												<input name="file" type="file" multiple=""/>
+											</div>
+										</div>
+									</div><a class="drop-block-wrap__btn link-modal" href="#modal-call" data-title="Расчет стоимости перевода" data-order="Расчет стоимости перевода">Получить расчет
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg></a>
+								</div>
+							</div>
+							<div class="col-main col">
+								<h1>Perevod.Ru &mdash;&nbsp;бюро переводов</h1>
+								<div class="header-block__text h5 fw-600">Быстрые и&nbsp;качественные переводы для физических и&nbsp;юридических лиц
+								</div>
+								<div class="row">
+													<div class="header-block__col col-4">
+														<div class="header-block__img-wrap"><img class="res-i" src="img/@2x/head-i-1.png" alt=""/>
+														</div>
+														<div class="h5 fw-600"> 19&nbsp;лет на&nbsp;рынке переводческих услуг</div>
+													</div>
+													<div class="header-block__col col-4">
+														<div class="header-block__img-wrap"><img class="res-i" src="img/@2x/head-i-2.png" alt=""/>
+														</div>
+														<div class="h5 fw-600"> 27 направлений перевода</div>
+													</div>
+													<div class="header-block__col col-4">
+														<div class="header-block__img-wrap"><img class="res-i" src="img/@2x/head-i-3.png" alt=""/>
+														</div>
+														<div class="h5 fw-600"> Более <br/>50&nbsp;специалистов</div>
+													</div>
+								</div><a class="header-block__btn link-modal" href="#modal-call" data-title="Бесплатная консультация" data-order="Бесплатная консультация">
+								<div class="d-none d-md-block">Получить бесплатную консультацию</div>
+								<div class="d-md-none">Получить консультацию</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end header-block-->
 			</header>
 			<!-- end HEADER.header-->
-			<!-- start header-block-->
-			<div class="header-block" id="header-block">
+			<!-- start s-about-->
+			<section class="s-about section" id="s-about">
 				<div class="container">
-					<h1>header-block</h1>
-					<div class="row"></div>
-				</div>
-			</div>
-			<!-- end header-block-->
-			<!-- start s-form-->
-			<div class="s-form section block-with-lazy" id="s-form">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-form</h2>
+					<div class="section-title">
+						<h2>О бюро</h2>
 					</div>
-					<div class="row"></div>
-				</div>
-			</div>
-			<!-- end s-form-->
-			<!-- start s-contact-->
-			<div class="s-contact section block-with-lazy" id="s-contact">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-contact</h2>
+					<div class="row">
+						<div class="col-aside col-md-3">
+							<div class="col-aside__inner">
+								<p>Perevod.ru&nbsp;&mdash; бюро переводов широкого профиля.</p>
+								<p>Мы&nbsp;оказываем услуги по&nbsp;письменному и&nbsp;устному переводу, а&nbsp;также ряд дополнительных услуг по&nbsp;редактированию, форматированию и&nbsp;верстке переведенных текстов, нотариальному заверению переводов, и&nbsp;озвучиванию аудио- и&nbsp;видеоматериалов</p>
+								<div class="d-none d-md-block"><a class="col-aside__btn link-modal" href="#modal-call" data-title="Бесплатная консультация" data-order="Бесплатная консультация">Узнать больше
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-main col">
+							<div class="row">
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-1.png" alt=""/>
+													</div>
+													<div class="s-about__text">В&nbsp;штате более 50 специалистов
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-2.png" alt=""/>
+													</div>
+													<div class="s-about__text">Каждый специалист имеет по&nbsp;меньшей мере 10&nbsp;лет переводческого опыта
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-3.png" alt=""/>
+													</div>
+													<div class="s-about__text">Работаем более чем с&nbsp;18&nbsp;европейскими и&nbsp;восточными языками
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-4.png" alt=""/>
+													</div>
+													<div class="s-about__text">Большой опыт &mdash; более 19&nbsp;лет на&nbsp;рынке переводческих услуг
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-5.png" alt=""/>
+													</div>
+													<div class="s-about__text">27&nbsp;видов перевода
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-6.png" alt=""/>
+													</div>
+													<div class="s-about__text">Гибкая система скидок &mdash; чем больше заказываете, тем меньше платите
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-7.png" alt=""/>
+													</div>
+													<div class="s-about__text">Мы&nbsp;сохраним конфиденциальность вашей информации
+													</div>
+												</div>
+												<div class="s-about__col col-lg-3 col-md-4 col-6">
+													<div class="s-about__img-wrap"><img class="res-i" src="img/@2x/about-i-8.png" alt=""/>
+													</div>
+													<div class="s-about__text">Бесплатное выполнение тестовых переводов*
+													</div>
+													<div class="small">* Уточняйте у менеджера</div>
+												</div>
+							</div>
+							<div class="d-md-none"><a class="col-aside__btn link-modal" href="#modal-call" data-title="Бесплатная консультация" data-order="Бесплатная консультация">Узнать больше
+									<svg class="icon icon-arrow-right ">
+										<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+									</svg></a></div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
-			</div>
-			<!-- end s-contact-->
+			</section>
+			<!-- end s-about-->
+			<!-- start s-servises-->
+			<section class="s-servises section lazy-background" id="s-servises">
+				<div class="container">
+					<div class="row">
+						<div class="col-aside col-md-3">
+							<div class="col-aside__inner">
+								<div class="section-title">
+									<h2>Наши услуги</h2>
+								</div>
+								<p>За&nbsp;19&nbsp;лет работы мы&nbsp;сумели накопить изрядный опыт в&nbsp;сфере переводческих услуг, который позволяет нам решать практически любые задачи, связанные с&nbsp;переводом информации с&nbsp;одного языка на&nbsp;другой</p>
+							</div>
+						</div>
+						<div class="col-main col">
+							<div class="row">
+								<div class="s-servises__panel-wrap col-sm-6">
+									<div class="s-servises__panel">
+										<h5>Письменный перевод</h5>
+										<ul>
+											<li>Срочный перевод</li>
+											<li>Перевод личных документов</li>
+											<li>Финансово-экономический</li>
+											<li>и&nbsp;юридический перевод</li>
+											<li>Технический перевод</li>
+											<li>Медицинский перевод</li>
+											<li>Научный перевод</li>
+											<li>Художественный перевод</li>
+											<li>Перевод видео- и&nbsp;аудиоматериалов</li>
+											<li>Перевод сайтов</li>
+											<li>Перевод носителем языка</li>
+											<li>Редактирование переводов</li>
+											<li>Верстка и&nbsp;форматирование</li>
+										</ul>
+									</div>
+								</div>
+								<div class="s-servises__panel-wrap col-sm-6">
+									<div class="s-servises__panel">
+										<h5>Устный перевод</h5>
+										<ul>
+											<li>Последовательный перевод</li>
+											<li>Синхронный перевод</li>
+										</ul>
+									</div>
+									<div class="s-servises__panel">
+										<h5>Заверение и легализация</h5>
+										<ul>
+											<li>Заверение печатью бюро</li>
+											<li>Нотариальное заверение перевода</li>
+											<li>Нотариальное заверение копии</li>
+											<li>Апостиль</li>
+											<li>Консульская легализация</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end s-servises-->
+			<!-- start s-langs-->
+			<section class="s-langs section" id="s-langs">
+				<div class="container">
+					<div class="section-title">
+						<h2>Языки перевода</h2>
+					</div>
+					<div class="row">
+						<div class="col-aside col-md-3">
+							<div class="col-aside__inner">
+								<p>На&nbsp;сегодняшний день мы&nbsp;работаем со&nbsp;многими европейскими, восточными и&nbsp;азиатскими языками.</p>
+								<p>Если нужного Вам языка нет в&nbsp;этом списке, попробуйте все&nbsp;же позвонить нам&nbsp;&mdash; у&nbsp;нас достаточно большая база переводчиков, возможно, мы&nbsp;сумеем 	<br/>Вам помочь</p>
+							</div>
+						</div>
+						<div class="col-main col">
+							<div class="tabs">
+								<div class="tabs__slider tabs__slider--js swiper-container">
+									<div class="tabs__caption swiper-wrapper">
+										<div class="tabs__btn swiper-slide active"> Европейские языки
+										</div>
+										<div class="tabs__btn swiper-slide">Восточные языки
+										</div>
+										<div class="tabs__btn swiper-slide">Азиатские языки
+										</div>
+									</div>
+								</div>
+								<div class="tabs__wrapper">
+									<div class="tabs__content active">
+										<ul>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-1.jpg" alt=""/>Английский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-2.jpg" alt=""/>Испанский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-3.jpg" alt=""/>Итальянский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-4.jpg" alt=""/>Немецкий
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-5.jpg" alt=""/>Французский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-6.jpg" alt=""/>Болгарский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-7.jpg" alt=""/>Венгерский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-8.jpg" alt=""/>Голландский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-9.jpg" alt=""/>Греческий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-10.jpg" alt=""/>Датский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-11.jpg" alt=""/>Польский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-12.jpg" alt=""/>Португальский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-13.jpg" alt=""/>Сербский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-14.jpg" alt=""/>Турецкий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-15.jpg" alt=""/>Финский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-16.jpg" alt=""/>Чешский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-17.jpg" alt=""/>Шведский
+												</li>
+										</ul>
+									</div>
+									<div class="tabs__content">
+										<ul>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-1.jpg" alt=""/>Английский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-2.jpg" alt=""/>Испанский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-3.jpg" alt=""/>Итальянский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-4.jpg" alt=""/>Немецкий
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-5.jpg" alt=""/>Французский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-6.jpg" alt=""/>Болгарский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-7.jpg" alt=""/>Венгерский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-8.jpg" alt=""/>Голландский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-9.jpg" alt=""/>Греческий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-10.jpg" alt=""/>Датский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-11.jpg" alt=""/>Польский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-12.jpg" alt=""/>Португальский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-13.jpg" alt=""/>Сербский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-14.jpg" alt=""/>Турецкий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-15.jpg" alt=""/>Финский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-16.jpg" alt=""/>Чешский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-17.jpg" alt=""/>Шведский
+												</li>
+										</ul>
+									</div>
+									<div class="tabs__content">
+										<ul>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-1.jpg" alt=""/>Английский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-2.jpg" alt=""/>Испанский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-3.jpg" alt=""/>Итальянский
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-4.jpg" alt=""/>Немецкий
+												</li>
+												<li class="text-primary"><img class="res-i lazy" src="#" data-src="img/@2x/lang-5.jpg" alt=""/>Французский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-6.jpg" alt=""/>Болгарский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-7.jpg" alt=""/>Венгерский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-8.jpg" alt=""/>Голландский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-9.jpg" alt=""/>Греческий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-10.jpg" alt=""/>Датский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-11.jpg" alt=""/>Польский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-12.jpg" alt=""/>Португальский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-13.jpg" alt=""/>Сербский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-14.jpg" alt=""/>Турецкий
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-15.jpg" alt=""/>Финский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-16.jpg" alt=""/>Чешский
+												</li>
+												<li><img class="res-i lazy" src="#" data-src="img/@2x/lang-17.jpg" alt=""/>Шведский
+												</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end s-langs-->
 			<footer class="footer block-with-lazy">
 				<div class="container">
-					<h2>footer</h2>
+					<div class="row">
+						<div class="col-aside col-md-3">
+							<div class="footer__head">
+								<div><a class="footer__link" href="tel:8(495)789-68-40"><span class="footer__icon-wrap">
+									<svg class="icon icon-phone_icon ">
+										<use xlink:href="img/svg/sprite.svg#phone_icon"></use>
+									</svg></span><span>8&nbsp;(495)&nbsp;789-68-40 (доб.&nbsp;550)</span></a>
+								</div>
+								<div><a class="footer__link" href="skype:perevod.ru"><span class="footer__icon-wrap">
+									<svg class="icon icon-skype_icon ">
+										<use xlink:href="img/svg/sprite.svg#skype_icon"></use>
+									</svg></span><span>perevod.ru</span></a>
+								</div>
+								<div><a class="footer__link" href="mailto:perevod@perevod.ru"><span class="footer__icon-wrap">
+									<svg class="icon icon-email ">
+										<use xlink:href="img/svg/sprite.svg#email"></use>
+									</svg></span><span>perevod@perevod.ru</span></a>
+								</div><a class="footer__btn link-modal" href="#modal-q" data-title="Задать вопрос" data-order="Задать вопрос">Задать вопрос</a>
+							</div><a class="footer__boot d-none d-md-flex" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/Logo_FS.png" alt=""/><span class="footer__link-text">Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution</span></a>
+						</div>
+						<div class="col-main col">
+							<div class="row">
+								<div class="footer__col col-xl-auto col-md-6">
+									<div class="footer__accordion"> 
+										<div class="footer__title"> Письменный перевод
+										</div>
+										<ul>
+											<li><a href="#">Срочный перевод</a></li>
+											<li><a href="#">Перевод личных документов</a></li>
+											<li><a href="#">Финансово-экономический и&nbsp;юридический перевод</a></li>
+											<li><a href="#">Технический перевод</a></li>
+											<li><a href="#">Медицинский перевод</a></li>
+											<li><a href="#">Научный перевод</a></li>
+											<li><a href="#">Художественный перевод</a></li>
+											<li><a href="#">Перевод видео- и аудиоматериалов</a></li>
+											<li><a href="#">Перевод сайтов</a></li>
+											<li><a href="#">Перевод носителем языка</a></li>
+											<li><a href="#">Редактирование переводов</a></li>
+											<li><a href="#">Верстка и форматирование</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="footer__col col-xl-auto col-md-6">
+									<div class="footer__accordion"> 
+										<div class="footer__title">Заверение и легализация
+										</div>
+										<ul>
+											<li><a href="#">Заверение печатью бюро</a></li>
+											<li><a href="#">Нотариальное заверение перевода</a></li>
+											<li><a href="#">Нотариальное заверение копии</a></li>
+											<li><a href="#">Апостиль</a></li>
+											<li><a href="#">Консульская легализация</a></li>
+										</ul>
+									</div>
+									<div class="footer__accordion"> 
+										<div class="footer__title">Устный перевод
+										</div>
+										<ul>
+											<li><a href="#">Последовательный перевод</a></li>
+											<li><a href="#">Синхронный перевод</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="footer__col col-xl-2 col-md-6">
+									<div class="footer__accordion"> 
+										<div class="footer__title">Дополнительная информация
+										</div>
+										<ul>
+											<li><a href="#"> О бюро</a></li>
+											<li><a href="#"> Стоимость услуг</a></li>
+											<li><a href="#"> Доставка и оплата</a></li>
+											<li><a href="#"> Контакты</a></li>
+										</ul>
+									</div><a class="footer__policy" href="#">Политика конфиденциальности</a>
+								</div>
+							</div><a class="footer__boot d-md-none" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/Logo_FS.png" alt=""/><span class="footer__link-text">Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution</span></a>
+						</div>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -138,26 +576,72 @@
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+						<div class="form-wrap__title form-wrap__title--js">
 						</div>
-						<p>Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут</p>
 					</div>
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
 					</div>
 					<!-- +e.input-wrap-->
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон*" name="tel" required="required"/>
 					</div>
-					<!-- +e.input-wrap--><input class="form-wrap__btn" type="submit" value="Рассчитать"/>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
-						</label>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__small small">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;даю согласие на&nbsp;обработку своих персональных данных и соглашаюсь с&nbsp;Политикой конфиденциальности
 					</div>
+					<button class="form-wrap__btn" type="submit"> Отправить
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+					</button>
 				</form>
 			</div>
 			<!-- #modal-call-->
+			<div class="form-wrap modal-win modal-form" id="modal-q">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-wrap__title--js">
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон*" name="tel" required="required"/>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group"><textarea class="form-wrap__input form-control" placeholder="Ваш вопрос*" name="textarea" required="required"></textarea>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__small small">Нажимая на&nbsp;кнопку &laquo;Отправить&raquo;, я&nbsp;даю согласие на&nbsp;обработку своих персональных данных и соглашаюсь с&nbsp;Политикой конфиденциальности
+					</div>
+					<button class="form-wrap__btn" type="submit">Задать вопрос
+						<svg class="icon icon-arrow-right ">
+							<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<!-- #modal-call-->
+			<div class="form-wrap modal-win modal-form" id="modal-thanks">
+				<div class="text-center">
+					<div class="form-wrap__title">Бесплатная консультация 
+					</div>
+					<div class="text-primary fw-500">Спасибо за&nbsp;оставленную заявку!</div>
+					<div class="form-wrap__small">Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время
+					</div>
+				</div>
+				<button class="form-wrap__btn modal-close-js" type="button">Ок
+				</button>
+			</div>
+			<!-- #modal-thanks-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>
+		<script src="js/dropzone.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- полифил для picture-->
 		<script src="libs/picturefill/picturefill.min.js"></script>
@@ -167,7 +651,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/slick-carousel/slick/slick.min.js"></script>
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
 		<!-- for svg libs-->
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>

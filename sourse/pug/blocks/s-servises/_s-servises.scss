@@ -1,0 +1,115 @@
+
+	// start .s-servises
+	.s-servises {
+		background-color: #f5f1ee;
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+		z-index: 2;
+		position: relative;
+		&.visible{
+			@include media-breakpoint-down(sm) {
+				background-image:  url(../img/@1x/servises-bg.jpg), 
+				linear-gradient(to right, $primary 0%, #4600cd 100%);
+				}
+				@include bgs;
+			&::before{
+				content: '';
+				z-index: -1;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 100%;
+				@include media-breakpoint-up(md) {
+					background-image:  url(../img/@2x/servises-bg.jpg), 
+					linear-gradient(to right, $primary 0%, #4600cd 100%);
+					@include media-breakpoint-up(lg) {
+						
+						width: 65%;
+					}
+					width: 75%;
+				}
+				@include bgs;
+				@include media-breakpoint-up(lg) {
+					
+				}
+			}
+		}
+			.col-aside{
+				color: #ffffff;
+		}
+		.col-main{
+			padding-top: rem(20);
+		}
+		&__panel{
+			box-shadow: 1px 5px 10px rgba(29, 27, 31, 0.07);
+			background-color: #ffffff;
+			@include media-breakpoint-up(xl) {
+
+				padding: rem(31) rem(50);
+			}
+			@include media-breakpoint-up(lg) {
+
+				padding: rem(31) rem(40);
+			}
+			padding: rem(31) rem(30);
+			margin-bottom: rem(28);
+			h5{
+				font-weight: 600;
+				padding-bottom: rem(8);
+			}
+			ul{
+				margin-bottom: rem(3);
+			}
+			li{
+				list-style-type: none;
+				position: relative;
+				padding-left: rem(30);
+				font-weight: 500;
+				line-height: 1.25;
+				padding-bottom: rem(2);
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: rem(8);
+					width: rem(15);
+					height: rem(11);
+					background-size: 100% 100%;
+					background-repeat: no-repeat;
+					background-image: url(../img/svg/check.svg);
+				}
+			}
+		}
+		&__panel-wrap{
+			display: flex;
+			flex-direction: column;
+
+		}
+		&__panel:nth-child(2){
+			flex-grow: 1;
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+} // end.s-servises

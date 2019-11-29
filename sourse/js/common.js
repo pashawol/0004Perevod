@@ -29,6 +29,17 @@ const JSCCommon = {
 		$(".modal-close-js").click(function() {
 			$.fancybox.close();
 		})
+
+		$(document).on('click', '.link-modal' ,function(){
+			
+			var th = $(this);
+			var modal = th.attr('href');
+			$(modal).find(".order").val(th.data('order'));
+			$(modal).find(".form-wrap__title--js").html(th.data('title')); 
+			// $(modal).find(".form-wrap__text--js").html(th.data('text')); 
+ 
+
+		})
 	},
 	// /magnificPopupCall
 	toggleMenu() {
@@ -86,7 +97,7 @@ const JSCCommon = {
 			$(this)
 				.addClass('active').siblings().removeClass('active')
 				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+				.eq($(this).index()).show().addClass('active');
 
 		});
 	},
@@ -94,9 +105,13 @@ const JSCCommon = {
 	inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	}
-	// /inputMask
+	},
+	dropFile(div) {
+		if (div) {
 
+			var myDropzone = new Dropzone(div, { url: "/file/post"});
+		}
+	}
 };
 
 function eventHandler() {
@@ -107,6 +122,7 @@ function eventHandler() {
 	// для свг
 	svg4everybody({});
 
+	// JSCCommon.dropFile();
 	JSCCommon.modalCall();
 
 	JSCCommon.tabscostume('tabs');
@@ -117,7 +133,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -180,48 +196,18 @@ function eventHandler() {
 		return false;
 	});
 
-	const icon = '<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 492.004 492.004" style="enable-background:new 0 0 492.004 492.004;" xml:space="preserve" ><path d="M382.678,226.804L163.73,7.86C158.666,2.792,151.906,0,144.698,0s-13.968,2.792-19.032,7.86l-16.124,16.12    c-10.492,10.504-10.492,27.576,0,38.064L293.398,245.9l-184.06,184.06c-5.064,5.068-7.86,11.824-7.86,19.028    c0,7.212,2.796,13.968,7.86,19.04l16.124,16.116c5.068,5.068,11.824,7.86,19.032,7.86s13.968-2.792,19.032-7.86L382.678,265    c5.076-5.084,7.864-11.872,7.848-19.088C390.542,238.668,387.754,231.884,382.678,226.804z" ></path>';
-	const arrl2 = (' <div class="r">' + icon),
-		arrr2 = (' <div class="l">' + icon);
-	// // карусель
-
-	const defaultSlide = {
-		speed: 600,
-		infinite: true,
-		arrows: true,
-		mobileFirst: true,
-		prevArrow: arrr2,
-		nextArrow: arrl2,
-		// autoplay: true,
-		autoplaySpeed: 6000,
-		lazyLoad: 'progressive',
-	};
-	$('.s-gal__slider--js').slick({
-		...defaultSlide,
-
-		slidesToShow: 1,
-		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4,
-			}
-		}, {
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 3,
-			}
-
-		}, {
-			breakpoint: 576,
-			settings: {
-				slidesToShow: 2,
-				arrows: true,
-			}
-
-
-		}],
-
+	$(document).on('click', ".footer__title", function(){
+		$(this).toggleClass("active").next().slideToggle();
+	})
+	var breadSl = new Swiper('.tabs__slider--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		freeMode: true, 
+		freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true,  
 	});
+
 	// $('.s-gal__slider\
 	// ,.slider-for2 ')
 	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
@@ -254,51 +240,7 @@ function eventHandler() {
  
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();
- 
-
-	var gets = (function() {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-		return b;
-	})();
-	// form
-	$("form").submit(function(e) {
-		e.preventDefault();
-		const th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data,
-		}).done(function(data)  {
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			});
-			// window.location.replace("/thanks.html");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-				// $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function() { });
-
-	});
-
+  
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

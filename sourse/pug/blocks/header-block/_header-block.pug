@@ -2,6 +2,37 @@ mixin header-block()
 	// start header-block
 	+b.header-block#header-block
 		.container
-			h1 header-block
 			.row
+				.col-aside.col-3.d-none.d-md-block
+					+b.drop-block-wrap
+						+b.drop-block.d-none.d-lg-block
+							+e.title Рассчитайте стоимость перевода
+							+e.inner
+								form.dropzone(action='/file-upload'  enctype="multipart/form-data")
+								.fallback
+									input(name='file', type='file', multiple='')
+						+e.btn.link-modal(href="#modal-call" data-title="Расчет стоимости перевода"  data-order="Расчет стоимости перевода") Получить расчет
+							+icon("arrow-right")
+				.col-main.col
+					h1 Perevod.Ru &mdash;&nbsp;бюро переводов
+					+e.text.h5.fw-600 Быстрые и&nbsp;качественные переводы для физических и&nbsp;юридических лиц
+					.row
+						mixin col(i,t)
+							+e.col.col-4
+								+e.img-wrap
+									img.res-i(src=`img/@2x/head-i-${i}.png`, alt="")
+								block
+						+col("1")
+							.h5.fw-600  19&nbsp;лет на&nbsp;рынке переводческих услуг
+						
+						+col("2")
+							.h5.fw-600  27 направлений перевода
+						
+						+col("3")
+							.h5.fw-600  Более 
+								br
+								| 50&nbsp;специалистов
+					+e.btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация")
+						.d-none.d-md-block Получить бесплатную консультацию
+						.d-md-none Получить консультацию
 	// end header-block

@@ -1,0 +1,49 @@
+mixin s-langs()
+	// start s-langs
+	+b.SECTION.s-langs.section#s-langs&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Языки перевода
+			.row
+				+b.col-aside.col-md-3
+						+e.inner
+							p На&nbsp;сегодняшний день мы&nbsp;работаем со&nbsp;многими европейскими, восточными и&nbsp;азиатскими языками.
+							p Если нужного Вам языка нет в&nbsp;этом списке, попробуйте все&nbsp;же позвонить нам&nbsp;&mdash; у&nbsp;нас достаточно большая база переводчиков, возможно, мы&nbsp;сумеем 	
+								br
+								| Вам помочь
+				.col-main.col
+					+b.tabs
+						+e.slider--js.swiper-container
+							+e.caption.swiper-wrapper
+								+e.btn.swiper-slide.active  Европейские языки
+								+e.btn.swiper-slide Восточные языки
+								+e.btn.swiper-slide Азиатские языки
+						+e.wrapper
+							mixin cont()
+								+e.content&attributes(attributes)
+									ul
+										mixin li(i,t)
+											li&attributes(attributes)
+												img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
+												= t
+										+li("1",'Английский')(class="text-primary")
+										+li("2",'Испанский')(class="text-primary")
+										+li("3",'Итальянский')(class="text-primary")
+										+li("4",'Немецкий')(class="text-primary")
+										+li("5",'Французский')(class="text-primary")
+										+li("6",'Болгарский')
+										+li("7",'Венгерский')
+										+li("8",'Голландский')
+										+li("9",'Греческий')
+										+li("10",'Датский')
+										+li("11",'Польский')
+										+li("12",'Португальский')
+										+li("13",'Сербский')
+										+li("14",'Турецкий')
+										+li("15",'Финский')
+										+li("16",'Чешский')
+										+li("17",'Шведский')
+							+cont()(class="active")
+							+cont()
+							+cont()
+	// end s-langs

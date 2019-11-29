@@ -40,7 +40,7 @@ $colors: () !default;
 $colors: map-merge(  ( ),  $colors);
 
 
-$primary:       $blue !default;
+$primary:       #821dc9 !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -59,6 +59,7 @@ $theme-colors: map-merge(
     // "info":       $info,
     // "warning":    $warning,
     "danger":     $danger,
+    "white":     $white,
     // "light":      $light,
     // "dark":       $dark
   ),
@@ -66,7 +67,7 @@ $theme-colors: map-merge(
 );
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                #1d1b1f !default;
 
 // Typography
 //
@@ -97,7 +98,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
+  xl: 1170px,
   // xxl: 1340px
 ) !default; 
 // Grid columns
@@ -126,11 +127,11 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 // title 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
+$h1-font-size:                rem(72) !default;
+$h2-font-size:                rem(48px) !default;
 $h3-font-size:                $font-size-base * 1.75 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h5-font-size:                rem(20) !default;
 $h6-font-size:                $font-size-base !default; 
 
 
@@ -213,10 +214,10 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         .575rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         $font-size-base !default;
+$input-btn-font-size:         rem(18) !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
@@ -270,7 +271,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-// $btn-border-radius:           $border-radius !default;
+$btn-border-radius:           0 !default;
 // $btn-border-radius-lg:        $border-radius-lg !default;
 // $btn-border-radius-sm:        $border-radius-sm !default;
 
@@ -298,23 +299,23 @@ $input-padding-x-lg:                    $input-btn-padding-x-lg !default;
 $input-font-size-lg:                    $input-btn-font-size-lg !default;
 // $input-line-height-lg:                  $input-btn-line-height-lg !default;
 
-$input-bg:                              $white !default;
+$input-bg:                              #f5f1ee !default;
 $input-disabled-bg:                     $gray-200 !default;
 
 $input-color:                           $gray-700 !default;
-$input-border-color:                    $gray-400 !default;
+$input-border-color:                    #f5f1ee !default;
 // $input-border-width:                    $input-btn-border-width !default;
 $input-box-shadow:                      inset 0 1px 1px rgba($black, .075) !default;
 
-// $input-border-radius:                   $border-radius !default;
+$input-border-radius:                   0 !default;
 // $input-border-radius-lg:                $border-radius-lg !default;
 // $input-border-radius-sm:                $border-radius-sm !default;
 
-$input-focus-bg:                        $input-bg !default;
-// $input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-bg:                        #e5e5f6 !default;
+$input-focus-border-color:              #e5e5f6 !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     $input-btn-focus-width !default;
-// $input-focus-box-shadow:                $input-btn-focus-box-shadow !default;
+$input-focus-box-shadow:                none  !default;
 
 $input-placeholder-color:               $gray-600 !default;
 $input-plaintext-color:                 $body-color !default;
