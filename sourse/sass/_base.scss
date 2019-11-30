@@ -18,15 +18,16 @@ html {
 body,
 html {
 	@include media-breakpoint-up(lg) {
-
 		font-size: $em-base;
+
 	}
 	@include media-breakpoint-up(sm)  {
-
+		
 		font-size: 14px;
 	}
 	font-size: 12px;
 	// @include font-size(1rem);
+	font-size: $em-base;
 } 
 .section { 
 	@include bgs; 
