@@ -2,10 +2,25 @@
   position: relative;
   z-index: 4;
   background-color: #f5f1ee;
+  a{
+    text-decoration: none !important;
+  }
+  .col-aside{
+    position: relative;
+    @include media-breakpoint-only(md) {
+		 
+      flex: 0 0 25%;
+      max-width: 25%; 
+  }
+  }
   .row{
     position: relative;
   }
   .col-main{
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
     padding-top: rem(13);
     padding-bottom: rem(13);
     @include media-breakpoint-up(lg) {
@@ -45,12 +60,27 @@ ul{
   text-align: center;
   @include roww(12);
   li{
+    @include media-breakpoint-up(lg) {
 
+      border-bottom: 1px solid transparent;
+      @include mt;
+      &:hover{
+        border-color:#7a19ca;
+        
+      }
+    }
   }
   a{
     @extend .text-body;
     font-weight: 500;
     line-height: 1.13;
+    display: block;
+    @include media-breakpoint-up(lg) {
+
+      padding-top: rem(13);
+      padding-bottom: rem(13);
+    }
+   
   }
 }
 &__tel{
@@ -59,7 +89,7 @@ line-height: 1.13;
 }
   position: relative;
   &__aside{
-    
+    max-width: 100%;
 @include media-breakpoint-down(xs) {
   img{
     max-width: 165px;

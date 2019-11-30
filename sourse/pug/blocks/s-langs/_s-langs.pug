@@ -16,21 +16,31 @@ mixin s-langs()
 						+e.slider--js.swiper-container
 							+e.caption.swiper-wrapper
 								+e.btn.swiper-slide.active  Европейские языки
-								+e.btn.swiper-slide Восточные языки
-								+e.btn.swiper-slide Азиатские языки
+								+e.btn.swiper-slide Восточные 
+									| 
+									span.d-none.d-sm-none языки
+								+e.btn.swiper-slide Азиатские 
+									| 
+									span.d-none.d-sm-none языки
 						+e.wrapper
 							mixin cont()
 								+e.content&attributes(attributes)
 									ul
-										mixin li(i,t)
-											li&attributes(attributes)
-												img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
-												= t
-										+li("1",'Английский')(class="text-primary")
-										+li("2",'Испанский')(class="text-primary")
-										+li("3",'Итальянский')(class="text-primary")
-										+li("4",'Немецкий')(class="text-primary")
-										+li("5",'Французский')(class="text-primary")
+										mixin li(i,t, a)
+											li
+												if a
+													a(href="#")&attributes(attributes)
+														img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
+														= t
+												else
+													span&attributes(attributes)
+														img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
+														= t
+										+li("1",'Английский', "a")(class="text-primary")
+										+li("2",'Испанский', "a")(class="text-primary")
+										+li("3",'Итальянский', "a")(class="text-primary")
+										+li("4",'Немецкий', "a")(class="text-primary")
+										+li("5",'Французский', "a")(class="text-primary")
 										+li("6",'Болгарский')
 										+li("7",'Венгерский')
 										+li("8",'Голландский')

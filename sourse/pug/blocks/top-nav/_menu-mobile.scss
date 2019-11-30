@@ -8,6 +8,8 @@ $h: em(2);
 	height: $h* 12;
 	position: absolute;
 	// pos
+	z-index: 200;
+	cursor: pointer;
 	right: 15px;
 	top: rem(22);
 

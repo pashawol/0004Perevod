@@ -201,11 +201,18 @@ function eventHandler() {
 	})
 	var breadSl = new Swiper('.tabs__slider--js', {
 		slidesPerView: 'auto',
-		spaceBetween: 30,
+		spaceBetween: 10,
 		freeMode: true, 
 		freeModeMomentum: true,
 		// spaceBetween: 30, 
 		watchOverflow: true,  
+		breakpoints: {
+			// when window width is >= 320px
+			576: {
+			 
+				spaceBetween: 30
+			} 
+		}
 	});
 
 	// $('.s-gal__slider\

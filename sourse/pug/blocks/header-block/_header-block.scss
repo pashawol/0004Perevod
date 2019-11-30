@@ -37,9 +37,11 @@
 			@include media-breakpoint-up(md) {
 			background-image:  url(../img/@2x/header-bg.jpg), 
 			linear-gradient(to right, $primary 0%, #4600cd 100%);
-			width: calc(50vw + (100% * 2 / 3));
+			width: calc(35vw + (100% * 2 / 3));
+
 			}
 			@include bgs;
+			background-position: top center;
 			@include media-breakpoint-up(lg) {
 
 			}
@@ -187,6 +189,76 @@
 			@extend .invisible;
 	}
 	&__inner{
-		border: 2px dashed #f5f1ee;
+		
 	}
+	.dz-started &__prev-wrap{
+		display: none;
+	}
+	&__prev-wrap{
+		text-align: center;
+		.icon{
+			color: #ddd8cf;
+			font-size: rem(30);
+			margin-bottom: rem(13);
+		}
+	}
+	.fw-500{
+		line-height: 1.13;
+		margin-bottom: 0.5rem;
+
+	}
+	&__text{
+		line-height: 1.13;
+		font-size: $small;
+	}
+	.dz-default.dz-message{
+		display: none;
+	}
+	.dropzone{
+		cursor: pointer;
+		border: 2px dashed #f5f1ee;
+		@include media-breakpoint-up(xl) {
+
+			padding: 20px;
+		}
+		padding: 15px;
+	}
+	.dz-drag-hover{
+					border: 2px dashed darken($color: #f5f1ee, $amount: 20%);
+					
+				}
+				.dz-started{
+					@include media-breakpoint-up(xl) {
+
+						padding: rem(15);
+					}
+					padding: rem(5);
+					border-style: solid;
+					display: flex;
+					flex-wrap: wrap;
+				}
+				.dz-preview.dz-image-preview {
+						width: calc(50% - 10px);
+						display: block;
+						margin: 5px 5px 5px;
+					}
+					.dropzone .dz-preview .dz-image {
+						border: 1px solid $primary;
+					width: 100%;
+					@include media-breakpoint-up(xl) {
+
+					} 
+					// height: 80px;
+					height: 100px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 4px;
+				}
+}
+
+.dropzone .dz-preview .dz-error-mark, .dropzone .dz-preview .dz-success-mark{
+	cursor: pointer;
+	z-index: 1002;
+
 }

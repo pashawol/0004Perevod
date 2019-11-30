@@ -23,13 +23,14 @@ mixin footer()
 								span perevod@perevod.ru
 						+e.btn.link-modal(href="#modal-q" data-title="Задать вопрос"  data-order="Задать вопрос") Задать вопрос
 					+e.boot(href="#").d-none.d-md-flex
-						img.res-i.lazy(src="#" data-src="img/@2x/Logo_FS.png", alt="")
+						img.res-i.lazy(src="https://www.fru-it.ru/" data-src="img/@2x/Logo_FS.png", alt="" target="_blank")
 						+e.link-text Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution
 				.col-main.col
 					.row
 						+e.col.col-xl-auto.col-md-6
 							+e.accordion 
-								+e.title  Письменный перевод
+								+e.title
+									a(href="#")   Письменный перевод
 
 								ul
 									li: a(href="#") Срочный перевод
@@ -46,7 +47,8 @@ mixin footer()
 									li: a(href="#") Верстка и форматирование
 						+e.col.col-xl-auto.col-md-6
 							+e.accordion 
-								+e.title Заверение и легализация
+								+e.title
+									a(href="#")  Заверение и легализация
 								ul
 									li: a(href="#") Заверение печатью бюро
 									li: a(href="#") Нотариальное заверение перевода
@@ -54,13 +56,15 @@ mixin footer()
 									li: a(href="#") Апостиль
 									li: a(href="#") Консульская легализация
 							+e.accordion 
-								+e.title Устный перевод
+								+e.title
+									a(href="#")  Устный перевод
 								ul
 									li: a(href="#") Последовательный перевод
 									li: a(href="#") Синхронный перевод
 						+e.col.col-xl-2.col-md-6
 							+e.accordion 
-								+e.title Дополнительная информация
+								+e.title
+									a(href="#")   Дополнительная информация
 								ul
 									li: a(href="#")  О бюро
 									li: a(href="#")  Стоимость услуг
@@ -68,5 +72,9 @@ mixin footer()
 									li: a(href="#")  Контакты
 							+e.policy(href="#") Политика конфиденциальности
 					+e.boot(href="#").d-md-none
-						img.res-i.lazy(src="#" data-src="img/@2x/Logo_FS.png", alt="")
+						img.res-i.lazyimg.res-i.lazy(src="https://www.fru-it.ru/" data-src="img/@2x/Logo_FS.png", alt="" target="_blank")
 						+e.link-text Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution
+	+e.btn.link-modal(href="#modal-thanks" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Спасибо 1
+	
+	+e.btn.link-modal(href="#modal-thanks2"  ) Спасибо 2
+	+e.btn.link-modal(href="#modal-thanks3"  ) Спасибо 3

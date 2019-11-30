@@ -36,7 +36,7 @@ mixin modal()
 			.text-center
 				+e.title--js
 			+input("Ваше Имя")(required) 
-			+input("Ваш телефон*","tel")(required)
+			+input("Ваш телефон*","tel")(required class="error")
 			//- +input("email","Ваше email")(required)
 			//- +text( "Комментарий")
 			+polite()
@@ -64,5 +64,19 @@ mixin modal()
 				+e.small Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время
 			+e.BUTTON.btn.modal-close-js(type="button" ) Ок
 		// #modal-thanks
+		+b.form-wrap(id="modal-thanks2" class="  modal-win modal-form" )
+			.text-center
+				+e.title Расчет стоимости перевода
+				.text-primary.fw-500 Спасибо за&nbsp;оставленную заявку!
+				+e.small Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время
+			+e.BUTTON.btn.modal-close-js(type="button" ) Ок
+		// #modal-thanks2
+		+b.form-wrap(id="modal-thanks3" class="  modal-win modal-form" )
+			.text-center
+				+e.title Задать вопрос
+				.text-primary.fw-500 Спасибо за заданный вопрос!
+				+e.small Наши менеджеры свяжутся с&nbsp;вами в&nbsp;ближайшее время
+			+e.BUTTON.btn.modal-close-js(type="button" ) Ок
+		// #modal-thanks3
 
 	// modal

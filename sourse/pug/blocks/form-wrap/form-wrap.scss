@@ -17,6 +17,9 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		//  resize: none;
+		&.error{
+			border-color: $danger;
+		}
  	}
  	&__btn{
 		 margin-top: rem(40);

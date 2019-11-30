@@ -41,7 +41,9 @@ html {
 		font-size: inherit;
 		font-weight: 600;
 		letter-spacing: rem(-0.48px);
-		
+		@include media-breakpoint-down(xs) {
+			font-size: 36px;
+		}
 		@include media-breakpoint-up(md) {}
 	}
 }
@@ -561,3 +563,17 @@ a{
 .form-control{
 	box-shadow: none !important;
 }
+
+a.text-body{
+	&:hover{
+		color: #4600cd !important;
+	}
+}
+
+@include media-breakpoint-down(xs) {
+	.btn{
+		font-size: 16px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+} 
