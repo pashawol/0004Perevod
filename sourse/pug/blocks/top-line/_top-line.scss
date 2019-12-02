@@ -117,6 +117,12 @@ line-height: 1.13;
     display: inline-block;
     margin-top: rem(45);
     @extend .text-body;
+    @include media-breakpoint-down(md) {
+      div{
+
+        color: #ffffff !important;
+      }
+    }
   }
 // 
 @include media-breakpoint-up(xl) {}

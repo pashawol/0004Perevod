@@ -537,7 +537,10 @@ a{
 	}
 	&:hover{
 		&::before{
-			opacity: 0;
+			@include media-breakpoint-up(md) {
+
+				opacity: 0;
+			}
 		}
 	}
 }
@@ -567,7 +570,11 @@ a{
 
 a.text-body{
 	&:hover{
-		color: #4600cd !important;
+		@include media-breakpoint-up(md) {
+
+			color: #4600cd !important;
+		}
+		color: $body-color !important;
 	}
 }
 
@@ -578,3 +585,14 @@ a.text-body{
 		padding-bottom: 12px;
 	}
 } 
+
+
+@include media-breakpoint-down(xs) {
+	.btn-outline-white{
+		background-color: transparent !important;
+		color: #ffffff !important;
+	}
+	a.text-primary{
+		color: $primary !important;
+	}
+}

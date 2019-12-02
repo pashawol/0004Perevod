@@ -96,7 +96,12 @@
   background-image: url($img);
 }
 @mixin mt($s: .36){
-  transition: all #{$s}s ;}
+  @include media-breakpoint-up(md) {
+
+    transition: all #{$s}s ;
+  }
+}
+
 @mixin c-white{
   color: #fff;}
 @mixin c-dark{

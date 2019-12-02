@@ -87,7 +87,8 @@ $h: em(2);
 	// left: 0;
 	right: 0;
 	transform: translate(120%, 0);
-	@include mt(.6);
+	// @include mt(.6);
+	transition: all 0.6s;
 	will-change: transform;
 
 	&__inner {
@@ -151,8 +152,12 @@ $h: em(2);
 			color: #ffffff !important;
 			padding: 5px;
 			display: block;
- 
+			
 		}
+	}
+	a{
+
+		text-decoration: none !important;
 	}
 	.menu-mobile__col .menu-mobile__nav{
 		margin-bottom: rem(30);

@@ -113,7 +113,9 @@
       text-decoration: none !important;
       @include mt;
       &:hover{
+        @include media-breakpoint-up(md) {
         color: $primary;
+        }
       }
     }
     ul{

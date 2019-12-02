@@ -106,8 +106,11 @@
 			@include mt;
 		}
 		&:not(.active):hover{
-			opacity: 1;
-			color: $primary;
+			@include media-breakpoint-up(md) {
+				opacity: 1;
+
+				color: $primary;
+			}
 		}
 		&.active{
 			opacity: 1;
