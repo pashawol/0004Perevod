@@ -196,6 +196,7 @@
 	}
 	&__prev-wrap{
 		text-align: center;
+		pointer-events: none;
 		.icon{
 			color: #ddd8cf;
 			font-size: rem(30);
