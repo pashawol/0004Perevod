@@ -30,11 +30,13 @@ mixin s-langs()
 											li
 												if a
 													a(href="#")&attributes(attributes)
-														img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
+														+e.img-wrap-sm
+															img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
 														= t
 												else
 													span&attributes(attributes)
-														img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
+														+e.img-wrap-sm
+															img.res-i.lazy(src="#" data-src=`img/@2x/lang-${i}.jpg`, alt="")
 														= t
 										+li("1",'Английский', "a")(class="text-primary")
 										+li("2",'Испанский', "a")(class="text-primary")

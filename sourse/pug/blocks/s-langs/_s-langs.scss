@@ -50,8 +50,7 @@
 			display: inline-flex;
 			text-decoration: none !important;
 			img{
-				flex-shrink: 0;
-				margin-right: 9px;
+			
 			}
 		}
 	}
@@ -65,6 +64,11 @@
 } // end.s-langs
 
 .tabs{
+	&__img-wrap-sm{
+		width: rem(30);
+		flex-shrink: 0;
+		margin-right: 9px;
+	}
 	&__slider{
 
 	}
