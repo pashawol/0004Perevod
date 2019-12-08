@@ -122,8 +122,8 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140.png);"></div>')
-	// /добавляет подложку для pixel perfect
+
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/contact-1140.png);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -184,6 +184,21 @@ function eventHandler() {
 			// when window width is >= 320px
 			576: {
 				spaceBetween: 30
+			}
+		}
+	});
+	var scontact = new Swiper('.office-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		// freeMode: true, 
+		// freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true,
+		breakpoints: {
+			// when window width is >= 320px
+			576: {
+				spaceBetween: 30,
+				slidesPerView: 3
 			}
 		}
 	}); // $('.s-gal__slider\
