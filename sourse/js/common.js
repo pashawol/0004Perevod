@@ -133,7 +133,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/contact-1140.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -211,6 +211,24 @@ function eventHandler() {
 			576: {
 			 
 				spaceBetween: 30
+			} 
+		}
+	});
+
+	var scontact = new Swiper('.office-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		// freeMode: true, 
+		// freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true,  
+		breakpoints: {
+			// when window width is >= 320px
+			576: {
+			 
+				spaceBetween: 30,
+				slidesPerView: 3,
+
 			} 
 		}
 	});
