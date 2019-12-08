@@ -20,6 +20,12 @@ mixin top-nav()
 			.row
 				.col-aside.col-3
 				.col-main.col
-					+mnu2()
+					.row
+						.col
+							+mnu2()
+						+e.lang.col-auto
+							a.active(href="#") Ru
+							span /
+							a(href="#") Eng
 					
 	// end top-nav

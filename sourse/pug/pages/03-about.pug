@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-about/_s-about.pug
+include ../blocks/s-servises/_s-servises.pug
+include ../blocks/s-langs/_s-langs.pug
+include ../blocks/s-patners/_s-patners.pug
+include ../blocks/s-ours/_s-ours.pug
+include ../blocks/s-trust/_s-trust.pug
+
+block variables
+	- let  mainPage= "page-body"
+block title
+	- let  title= 'О бюро'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+		//- +header-block()
+	+page-head("Главная",title)
+	+s-about("not")
+	+s-patners
+	+s-ours
+	+s-trust
+	+s-servises
+	+s-langs
+	+footer()

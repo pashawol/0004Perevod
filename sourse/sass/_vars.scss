@@ -129,7 +129,7 @@ $line-height-base:            1.5 !default;
 // title 
 $h1-font-size:                rem(72) !default;
 $h2-font-size:                rem(48px) !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h3-font-size:                rem(30) !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                rem(20) !default;
 $h6-font-size:                $font-size-base !default; 
@@ -241,7 +241,7 @@ $input-btn-font-size-lg:      $font-size-lg !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y:               $input-btn-padding-y !default;
+$btn-padding-y:               $input-btn-padding-y * .7 !default;
 $btn-padding-x:               $input-btn-padding-x !default;
 $btn-font-family:             $input-btn-font-family !default;
 $btn-font-size:               $input-btn-font-size !default;
@@ -863,15 +863,15 @@ $custom-file-text: (
 // // Breadcrumbs
 
 // $breadcrumb-padding-y:              .75rem !default;
-// $breadcrumb-padding-x:              1rem !default;
+$breadcrumb-padding-x:              0 !default;
 // $breadcrumb-item-padding-x:         .5rem !default;
 
-// $breadcrumb-margin-bottom:          1rem !default;
+$breadcrumb-margin-bottom:          rem(0) !default;
 
-// $breadcrumb-bg:                     $gray-200 !default;
-// $breadcrumb-divider-color:          $gray-600 !default;
-// $breadcrumb-active-color:           $gray-600 !default;
-// $breadcrumb-divider:                quote("/") !default;
+$breadcrumb-bg:                     transparent !default;
+$breadcrumb-divider-color:          $body-color !default;
+$breadcrumb-active-color:           $body-color !default;
+$breadcrumb-divider:                url(../img/svg/divider.svg) !default;
 
 // // $breadcrumb-border-radius:          $border-radius !default;
 

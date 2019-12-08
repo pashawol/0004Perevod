@@ -1,0 +1,134 @@
+
+	// start .s-detailed
+	.s-detailed {
+
+		.page-head{
+			padding-top: rem(20);
+			padding-bottom: rem(40);
+		}
+		h5,
+		h3{
+			font-weight: bold;
+		}
+		p{
+			a{
+				font-weight: 500;
+				display: inline-block;
+			}
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-flex;
+			@extend .btn-primary;
+			max-width: rem(360);
+			@include media-breakpoint-up(sm) {
+				margin-left: 0;
+			}
+			margin-left: auto;
+			margin-right: auto;
+			// margin-top: rem(5);
+		}
+		.col-aside{
+			padding-top: rem(65);
+			ul{
+				list-style-type: none;
+				li{
+
+					padding-left: rem(20);
+				}
+				a{
+					@extend .text-body;
+					text-decoration: none !important;
+					font-weight: 500;
+					&.active{
+						color: $primary !important;
+					}
+				}
+			}
+		&__inner > ul { 
+			max-width: rem(290);
+			li{
+				a{
+					display: inline-block;
+					margin-bottom: .5em;
+				}
+			}
+			& 	> li { 
+				padding-left: 0;
+				& >	a{
+					@include rfs($h5-font-size);
+					font-weight: 600;
+					display: inline-block;
+				}
+				& > ul {
+					> li{
+
+						& > ul{
+							// padding-left: rem(20);
+							> li{
+
+								& 	> ul{
+									// padding-left: rem(20);
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+	}
+
+		table{
+			border-collapse: unset;
+			margin-bottom: rem(40);
+			tr{
+				background-color: #f5f1ee;
+			}
+			td{
+				vertical-align: middle;
+				@include media-breakpoint-up(sm) {
+				width: 50%;
+
+				padding: rem(30);
+			}
+				strong{
+					font-size: rem(18);
+				}
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {
+		tr{
+			display: block;
+			padding: rem(20);
+			// border-bottom: 1px solid #000;
+			margin-bottom: 1px;
+		}
+		td{
+			display: block;
+		}
+	} 
+
+} // end.s-detailed

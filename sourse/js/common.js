@@ -133,7 +133,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140.png);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140_detailed.jpg);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -214,6 +214,32 @@ function eventHandler() {
 			} 
 		}
 	});
+	
+	var breadSl = new Swiper('.s-patners__slider--js', {
+		 
+		slidesPerColumn: 1,
+		spaceBetween: 20,
+		// loop: true,
+		
+		// slidesPerColumnFill: 'row',
+		navigation: {
+			nextEl: $('.s-patners .swiper-button-next'),
+			prevEl: $('.s-patners .swiper-button-prev'),
+		},
+		breakpoints: {
+		 
+			
+			576: {
+				loop: false,
+				slidesPerColumn: 2,
+				slidesPerColumnFill: 'row', 
+				slidesPerView: 3,
+				 
+			} ,
+
+		}
+	});
+
 
 	// $('.s-gal__slider\
 	// ,.slider-for2 ')

@@ -3,10 +3,10 @@ mixin col-main()
 		.row
 			.col-lg
 				+mnu()
-			.col-lg-auto.text-center
-				+e.tel(href="tel:8(916)657-88-39") 8 (916) 657-88-39
-			.col-lg-auto.text-center
-				+e.tel(href="tel:8(495)789-68-40") 8 (495) 789-68-40
+			+e.sm-col.col-lg-auto.text-center
+				+e.tel.small(href="tel:8(916)657-88-39") 8 (916) 657-88-39
+			+e.sm-col.col-lg-auto.text-center
+				+e.tel.small(href="tel:8(495)789-68-40") 8 (495) 789-68-40 (доб.550)
 mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy

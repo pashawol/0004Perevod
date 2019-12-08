@@ -1,0 +1,26 @@
+mixin s-trust()
+	// start s-trust
+	+b.SECTION.s-trust.section#s-trust&attributes(attributes)
+		.container
+			+b.section-title--sm
+				h2 Нам можно доверять
+			+e.row-wrap
+				.row
+					mixin item(i)
+						.col-6
+							+e.item
+								+e.img-wrap
+									img.res-i.lazy(src="#" data-src=`img/svg/trust-${i}`, alt="")
+								block
+					+item("1.svg")
+						+e.text Оформляем договор на&nbsp;оказание переводческих услуг с&nbsp;юридическими и&nbsp;физическими лицами
+					+item("2.png")
+						+e.text Никогда не&nbsp;превышаем размер оплаты за&nbsp;выполненный заказ по&nbsp;переводу
+					+item("3.svg")
+						+e.text Несем полную материальную ответственность за&nbsp;качество переводов
+					+item("4.svg")
+						+e.text 
+							a.text-link.tdu(href="#") Скачать учредительные документы
+			+e.btn.link-modal(href="#modal-call" data-title="Заявка на сотрудничество"  data-order="Заявка на сотрудничество") Заявка на сотрудничество
+					+icon("arrow-right")
+	// end s-trust
