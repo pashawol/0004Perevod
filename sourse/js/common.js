@@ -134,6 +134,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140_detailed.jpg);"></div>')
+ 
 	// /добавляет подложку для pixel perfect
 
 
@@ -220,7 +221,7 @@ function eventHandler() {
 		slidesPerColumn: 1,
 		spaceBetween: 20,
 		// loop: true,
-		
+	
 		// slidesPerColumnFill: 'row',
 		navigation: {
 			nextEl: $('.s-patners .swiper-button-next'),
@@ -240,6 +241,29 @@ function eventHandler() {
 		}
 	});
 
+
+	var scontact = new Swiper('.office-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		// freeMode: true, 
+		// freeModeMomentum: true,
+		// spaceBetween: 30, 
+		loop: true,
+		watchOverflow: true,  
+		navigation: {
+			nextEl: $('.s-contact .swiper-button-next'),
+			prevEl: $('.s-contact .swiper-button-prev'),
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			576: {
+			 
+				spaceBetween: 30,
+				slidesPerView: 3,
+
+			} 
+		}
+	});
 
 	// $('.s-gal__slider\
 	// ,.slider-for2 ')

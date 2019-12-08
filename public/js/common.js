@@ -204,6 +204,26 @@ function eventHandler() {
 				slidesPerView: 3
 			}
 		}
+	});
+	var scontact = new Swiper('.office-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		// freeMode: true, 
+		// freeModeMomentum: true,
+		// spaceBetween: 30, 
+		loop: true,
+		watchOverflow: true,
+		navigation: {
+			nextEl: $('.s-contact .swiper-button-next'),
+			prevEl: $('.s-contact .swiper-button-prev')
+		},
+		breakpoints: {
+			// when window width is >= 320px
+			576: {
+				spaceBetween: 30,
+				slidesPerView: 3
+			}
+		}
 	}); // $('.s-gal__slider\
 	// ,.slider-for2 ')
 	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {

@@ -1,9 +1,83 @@
 mixin s-contact()
 	// start s-contact
 	+b.s-contact.section.block-with-lazy#s-contact&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 s-contact
-				
-			.row
+		.container 
+			+b.tabs
+				+e.slider--js.swiper-container
+					+e.caption.swiper-wrapper
+						+e.btn.swiper-slide.active  Офис на Шаболовке
+						+e.btn.swiper-slide Офис на Орджоникидзе  
+				+e.wrapper
+					mixin cont()
+						+e.content&attributes(attributes)
+							.row
+								.col-aside.col-md-4
+									+e.head
+										div
+											+e.link(href="https://yandex.ru/maps/-/CBFnVFrn-C")
+												+e.icon-wrap
+													+icon("contact-home")
+												span г. Москва, ул. Шаболовка, д.&nbsp;34, стр.&nbsp;5,подъезд 8&nbsp;(БЦ&nbsp;&laquo;Матрикс-офис&raquo;), офис&nbsp;7
+										
+										div
+											+e.link
+												+e.DIV.icon-wrap
+													+icon("contact-clock")
+												span 10.30&nbsp;&mdash; 18.30 ежедневно (сб&nbsp;и&nbsp;вс&nbsp;выходные)
+										
+										div
+											+e.link(href="tel:8(495)789-68-40")
+												+e.DIV.icon-wrap
+													+icon("phone_icon")
+												span 8&nbsp;(495)&nbsp;789-68-40 (доб.&nbsp;550)
+										
+										div
+											+e.link(href="skype:perevod.ru")
+												+e.DIV.icon-wrap
+													+icon("skype_icon")
+												span perevod.ru
+										
+										div
+											+e.link(href="mailto:perevod@perevod.ru")
+												+e.DIV.icon-wrap
+													+icon("email")
+												span perevod@perevod.ru
+										
+										div
+											+e.link
+												+e.DIV.icon-wrap
+													+icon("contact-car")
+												span Рядом с&nbsp;метро Шаболовская, соседнее здание, проходная напротив выхода из&nbsp;метро, справа от&nbsp;ресторана &laquo;Макдоналдс&raquo;, там сказать, что идете в&nbsp;Матрикс-офис, и&nbsp;дадут пропуск на&nbsp;вход
+											
+										div
+											+e.link(href="#")
+												+e.DIV.icon-wrap
+													+icon("contact-place")
+												span Проложить маршрут
+								//- карта
+								.col-main.col-md-8.col-12
+									.map-wrap
+										//- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A28e3496040ff0321885721d3614ca5608823915cf9ce1dfe558fab3c8cc0a7ff&amp;width=700&amp;height=411&amp;lang=ru_UA&amp;scroll=true"></script>
+										<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.303994239018!2d37.604641316136785!3d55.71846900210664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b6d2171c249%3A0x32c8baa052cb7379!2z0YPQuy4g0KjQsNCx0L7Qu9C-0LLQutCwLCAzNNGBMSwg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDExNTQxOQ!5e0!3m2!1sru!2sua!4v1575731036743!5m2!1sru!2sua" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+									//- слайдер
+									.office.office-slider-js.swiper-container
+										.swiper-wrapper
+											.swiper-slide
+												a(href="img/@2x/ofice-photo.jpg" data-fancybox="gallery")
+													+e.IMG.ofice-img(src='img/@2x/ofice-photo.jpg' alt='indefinite')
+													+icon("office-increase")
+											.swiper-slide
+												a(href="img/@2x/entrance.jpg" data-fancybox="gallery")
+													+e.IMG.ofice-img(src='img/@2x/entrance.jpg' alt='indefinite')
+													+icon("office-increase")
+											.swiper-slide
+												a(href="img/@2x/ofice-photo.jpg" data-fancybox="gallery")
+													+e.IMG.ofice-img(src='img/@2x/ofice-photo.jpg' alt='indefinite')
+													+icon("office-increase")
+									.d-sm-none
+										+arrow()
+
+
+					+cont()(class="active")
+					+cont()
 	// end s-contact
