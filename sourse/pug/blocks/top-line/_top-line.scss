@@ -1,3 +1,99 @@
+
+.main-page{
+  .top-line{
+    .col-aside{
+      .col-md-auto.d-none.d-lg-block{
+        display: block !important;
+      }
+    }
+  }
+  .top-line__col--line{
+    // display: none;
+  }
+  .top-line__col--row{
+    display: none;
+    .top-line__sm-col{
+      width: 100%;
+      padding-left: 15px;
+    }
+  }
+  @include media-breakpoint-only(md) {
+    .top-line__col--row{
+
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    
+  }
+  @include media-breakpoint-down(md) {
+
+    .top-line__col--line{
+      display: none !important;
+    }
+  }
+}
+.page-body{
+  
+  .top-line__modal-link{
+    margin-top: 0;
+  }
+  @include media-breakpoint-down(md) {
+  .top-line__sm-col{
+
+      text-align: right !important;
+      width: 100%;
+    }
+    .top-line__nav{
+      display: flex;
+      padding-left: 15px;
+    }
+  }
+  .header{
+    position: relative;
+  }
+  .top-nav{
+    bottom: 0;
+  }
+  .top-line__aside{
+    position: relative;
+    @include media-breakpoint-up(xl) {
+
+      padding-bottom: rem(18);
+    }
+    @include media-breakpoint-up(md) {
+
+      padding-bottom: rem(14);
+    }
+    @include media-breakpoint-only(md) {
+      padding-top: rem(28);
+      padding-bottom: rem(28);
+    } 
+    .top-line__modal-link{
+      display: none;
+    }
+  }
+  .top-line{
+    box-shadow: 1px 5px 10px rgba(29, 27, 31, 0.12), 1px 1px 5px rgba(29, 27, 31, 0.05);
+    .row{
+      align-items: flex-start
+    }
+  }
+  .top-line__logo{
+    img{
+      max-width: rem(174);
+    }
+  }
+  .top-line__col{
+    flex-basis: 0; 
+    flex-grow: 1;
+    max-width: 100%;
+    @include media-breakpoint-up(xl) {
+
+      // display: block !important;
+    }
+  }
+}
 .top-line {
   position: relative;
   z-index: 4;
@@ -17,6 +113,9 @@
     position: relative;
   }
   .col-main{
+    .row{
+      align-items: center;
+    }
     @include media-breakpoint-up(lg) {
       padding-top: 0;
       padding-bottom: 0;
@@ -117,10 +216,23 @@ line-height: 1.13;
     display: inline-block;
     margin-top: rem(45);
     @extend .text-body;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       div{
 
         color: #ffffff !important;
+      }
+    }
+  }
+  &__sm-col{
+    padding-left: 0;
+   
+  }
+
+  &__lang{
+    a{
+      color: $body-color !important;
+      &:not(.active){
+        opacity: 0.3;
       }
     }
   }

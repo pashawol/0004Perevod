@@ -22,8 +22,8 @@ mixin footer()
 									+icon("email")
 								span perevod@perevod.ru
 						+e.btn.link-modal(href="#modal-q" data-title="Задать вопрос"  data-order="Задать вопрос") Задать вопрос
-					+e.boot(href="#").d-none.d-md-flex
-						img.res-i.lazy(src="https://www.fru-it.ru/" data-src="img/@2x/Logo_FS.png", alt="" target="_blank")
+					+e.boot(href="https://www.fru-it.ru/" target="_blank").d-none.d-md-flex
+						img.res-i.lazy(src="#" data-src="img/@2x/Logo_FS.png", alt="")
 						+e.link-text Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution
 				.col-main.col
 					.row
@@ -71,8 +71,8 @@ mixin footer()
 									li: a(href="#")  Доставка и оплата
 									li: a(href="#")  Контакты
 							+e.policy(href="#") Политика конфиденциальности
-					+e.boot(href="#").d-md-none
-						img.res-i.lazyimg.res-i.lazy(src="https://www.fru-it.ru/" data-src="img/@2x/Logo_FS.png", alt="" target="_blank")
+					+e.boot(href="https://www.fru-it.ru/" target="_blank").d-md-none
+						img.res-i.lazyimg.res-i.lazy(src="#" data-src="img/@2x/Logo_FS.png", alt=""  )
 						+e.link-text Создание и&nbsp;продвижение сайта&nbsp;&mdash; Fruitful Solution
 	+e.btn.link-modal(href="#modal-thanks" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Спасибо 1
 	

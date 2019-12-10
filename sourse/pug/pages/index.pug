@@ -8,7 +8,7 @@ include ../blocks/s-servises/_s-servises.pug
 include ../blocks/s-langs/_s-langs.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'main-page'
 block title
 	- let  title= 'title'
 	title= title
@@ -16,6 +16,7 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-line()
+			+col-main()(class="top-line__col--row")
 		+top-nav()
 		+header-block()
 	+s-about

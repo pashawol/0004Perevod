@@ -1,5 +1,48 @@
+
+.page-body .top-nav{
+			padding: 0;
+		.col-main{
+			@include media-breakpoint-up(lg) {
+
+				
+				padding-top: rem(15);
+				padding-bottom: rem(15);
+				
+			}
+			padding-top: rem(10);
+			padding-bottom: rem(10);
+			
+			&::before{
+				content: '';
+				z-index: -1;
+				position: absolute;
+				@include media-breakpoint-up(xl) {
+	
+					left: 15px;
+				}
+				left: 0;
+				top: 0;
+				height: 100%;
+				background-color: $primary;
+				@include media-breakpoint-up(md) {
+					@include bgs;
+				background-image:  url(../img/@2x/header-bg.jpg), 
+				linear-gradient(to right, $primary 0%, #4600cd 100%);
+				width: calc(35vw + (100% * 2 / 3));
+	
+				}
+				@include bgs;
+				background-position: top center;
+				@include media-breakpoint-up(lg) {
+	
+				}
+				// width: 1;
+			}
+}
+}
 .top-nav {
 	padding-top: rem(20);
+	// padding-bottom: rem(12);
 	position: absolute;
 	
 	left: 0;
@@ -14,7 +57,11 @@
 		display: flex;
 		list-style-type: none;
 		text-align: center;
-		@include roww(12);
+		@include media-breakpoint-up(xl) {
+
+			@include roww(12);
+		}
+		@include roww(3);
 		
 	@include media-breakpoint-only(lg) {
 		justify-content: space-between;
@@ -28,7 +75,31 @@
 			line-height: 1.13;
 		}
 	}
-
+	&__lang{
+		color: #ffffff;
+		span{
+			
+			opacity: 0.3;
+		}
+		a{
+			opacity: 0.3;
+			color: #ffffff !important;
+			&.active,
+			&:hover{
+				@include mt;
+				opacity: 1;
+			}
+		}
+	}
+	.top-nav__sm-col{
+		width: 100%;
+		a{
+			color: #ffffff !important;
+		}
+	}
+	.col-auto.d-lg-none{
+		max-width: rem(220);
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 

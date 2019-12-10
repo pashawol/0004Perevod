@@ -91,8 +91,32 @@ var JSCCommon = {
 	// /mobileMenu
 	// табы  . 
 	tabscostume: function tabscostume(tab) {
+		var scontact;
+		var parametr = {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+			watchOverflow: true,
+			lazy: {
+				loadPrevNext: true
+			},
+			loadPrevNextAmount: 2,
+			navigation: {
+				nextEl: $('.' + tab + '__content').find('.swiper-button-next'),
+				prevEl: $('.' + tab + '__content').find('.swiper-button-prev')
+			},
+			breakpoints: {
+				// when window width is >= 320px
+				576: {
+					spaceBetween: 30,
+					slidesPerView: 3
+				}
+			}
+		};
+		scontact = new Swiper('.office-slider-js', parametr);
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).show().addClass('active');
+			scontact = new Swiper($('.' + tab + '__content').eq($(this).index()).find('.office-slider-js'), parametr); //  scontact.update();
 		});
 	},
 	// /табы  
@@ -123,7 +147,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/contact-1140.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140_detailed.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -187,48 +211,24 @@ function eventHandler() {
 			}
 		}
 	});
-	var scontact = new Swiper('.office-slider-js', {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		// freeMode: true, 
-		// freeModeMomentum: true,
-		// spaceBetween: 30, 
-		watchOverflow: true,
+	var breadSl2 = new Swiper('.s-patners__slider--js', {
+		slidesPerColumn: 1,
+		spaceBetween: 20,
+		// loop: true,
+		// slidesPerColumnFill: 'row',
+		navigation: {
+			nextEl: $('.s-patners .swiper-button-next'),
+			prevEl: $('.s-patners .swiper-button-prev')
+		},
 		breakpoints: {
-			// when window width is >= 320px
 			576: {
-				spaceBetween: 30,
+				loop: false,
+				slidesPerColumn: 2,
+				slidesPerColumnFill: 'row',
 				slidesPerView: 3
 			}
 		}
-	}); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
-	// modal window
-	//    const wow = new WOW({ mobile: false });
-	//         wow.init();
+	});
 }
 
 ;

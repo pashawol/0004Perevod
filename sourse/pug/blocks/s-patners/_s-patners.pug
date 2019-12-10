@@ -1,0 +1,29 @@
+mixin s-patners()
+	// start s-patners
+	+b.SECTION.s-patners#s-patners&attributes(attributes)
+		.container.section 
+			+b.section-title--sm.d-lg-none
+						h2 Ключевые клиенты
+			.row
+				+b.col-aside.col-md-3
+					+e.inner 
+						+b.section-title--sm.d-none.d-lg-block
+							h2 Ключевые клиенты
+						p На&nbsp;сегодняшний день мы&nbsp;сотрудничаем со&nbsp;многими российскими и&nbsp;зарубежными компаниями. В&nbsp;нашей деятельности мы&nbsp;в&nbsp;максимальной степени ориентируемся на&nbsp;пожелания и&nbsp;интересы заказчиков, что позволяет нам создать предпосылки для дальнейшего взаимовыгодного сотрудничества.
+				.col-main.col-md-9
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							- for (var x = 1; x <= 6; x++)
+								+e.slide.swiper-slide
+									+e.item
+										img.res-i.sw(src=`img/@2x/logo-${x}.png`, alt="")
+								// /+e.slide.swiper-slide
+						 
+							- for (var x = 1; x <= 12; x++)
+								+e.slide.swiper-slide
+									+e.item
+										img.res-i.sw(src=`img/@2x/logo-${x}.png`, alt="")
+								// /+e.slide.swiper-slide
+						 
+					+arrow()
+	// end s-patners

@@ -22,6 +22,13 @@ mixin breadcrumb(...items)
 
 		
 //- pugination
+mixin page-head(...items)
+	+b.page-head
+		.container
+			+breadcrumb(...items)
+			-for (var i = 0; i < items.length; i++)
+				if i == (items.length - 1) 
+					h1= items[i]
 mixin pugin()
 	//- nav(aria-label='...')
 	//- 	ul.pagination.justify-content-center
@@ -76,10 +83,9 @@ mixin pugin()
 //- h2.yel(class="  wow fadeInUp animated " data-wow-offset="120" data-wow-duration="1.2s")  
 //- arrow for swiper-slider
 mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+	+e.arrow-wrap
+		.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		.swiper-button-hand.swiper-button-hand-next.swiper-button-next
 //- /arrow for swiper-slider
 		
  

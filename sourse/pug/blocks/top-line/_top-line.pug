@@ -1,13 +1,24 @@
-mixin col-main()
-	+e.col.col-main.col-lg&attributes(attributes)
+mixin tel-block()
+	div&attributes(attributes)
 		.row
-			.col-lg
+			+e.sm-col.col-md-auto.text-center
+				+e.tel.small(href="tel:8(916)657-88-39") 8 (916) 657-88-39
+			+e.sm-col.col-md-auto.text-center
+				+e.tel.small(href="tel:8(495)789-68-40") 8 (495) 789-68-40 (доб.550)
+mixin col-main(t)
+	+e.col.col-main.col&attributes(attributes)
+		.row
+			.col
 				+mnu()
-			.col-lg-auto.text-center
-				+e.tel(href="tel:8(916)657-88-39") 8 (916) 657-88-39
-			.col-lg-auto.text-center
-				+e.tel(href="tel:8(495)789-68-40") 8 (495) 789-68-40
-mixin top-line()
+			if t
+				.col-auto.d-lg-none.d-md-block.d-none
+					+e.modal-link(href="#") 
+						img.res-i(src="img/svg/mail_icon.svg", alt="")
+				
+				+lang()(class="col-auto d-lg-none d-md-block d-none")
+			 
+			+tel-block()(class="col-md-auto d-none d-lg-block")
+mixin top-line(t)
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
@@ -17,12 +28,12 @@ mixin top-line()
 				.col-aside.col-md-3
 					+e.aside
 						+e.logo
-							img.res-i(src="img/svg/logo.svg", alt="")
-						+col-main()(class="d-lg-none d-none d-md-block")
+							a(href="#"): img.res-i(src="img/svg/logo.svg", alt="")
+						block
 						div.d-none.d-md-block
 							+e.modal-link(href="#")
 								img.res-i(src="img/svg/mail_icon.svg", alt="")
 								div Обратная связь
-				
-				+col-main()(class="d-none d-lg-block")
+
+				+col-main(t)(class="top-line__col--line d-none d-md-block")
 	// end .top-line

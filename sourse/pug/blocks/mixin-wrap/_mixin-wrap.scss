@@ -34,3 +34,18 @@
 	}
 }
 
+
+.page-head{
+	padding-top: rem(60);
+	// padding-bottom: rem(70);
+	.breadcrumb{
+		padding-bottom:  rem(6);
+	}
+	h1{
+		@extend .h2;
+		font-weight: bold;
+	}
+	+ .section{
+		padding-top: rem(30);
+	}
+}

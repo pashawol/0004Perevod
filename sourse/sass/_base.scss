@@ -13,18 +13,24 @@ html {
 	height: 100%;
 	background-position: center 551px;
 	opacity: 0;
-	opacity: 0.7;
+	// opacity: 0.7;
 }  
 body,
 html {
-	@include media-breakpoint-up(lg) {
+	@include media-breakpoint-up(xl) {
 		font-size: $em-base;
 
 	}
+	@include media-breakpoint-up(lg)  {
+		
+		font-size: 15px;
+	}
+	
 	@include media-breakpoint-up(sm)  {
 		
-		font-size: 14px;
+		font-size: 13px;
 	}
+
 	font-size: 12px;
 	// @include font-size(1rem);
 	font-size: $em-base;
@@ -34,7 +40,10 @@ html {
 		padding-top: rem(40px);
 		padding-bottom: rem(40px); 
 }
-
+.container .container{
+	padding-left: 0;
+	padding-right: 0;
+}
 .section-title {
 	@extend .h2;
 	padding-bottom: em(7); 
@@ -43,9 +52,15 @@ html {
 		font-weight: 600;
 		letter-spacing: rem(-0.48px);
 		@include media-breakpoint-down(xs) {
-			font-size: 36px;
+			font-size: 30px;
 		}
 		@include media-breakpoint-up(md) {}
+	}
+	&--sm{
+		h2{
+
+			font-size: rem(30px);
+		}
 	}
 }
 
@@ -81,7 +96,15 @@ body {
 }
 
 .tdu {
-	text-decoration: underline;
+	// text-decoration: underline;
+	text-decoration: none !important;
+	@include media-breakpoint-up(sm) {
+
+		border-bottom: 1px solid ;
+	}
+	&:hover{
+		border-color: transparent;
+	}
 
 	&:hover {
 		text-decoration: none;
@@ -508,7 +531,14 @@ a{
 	}
 }
 .col-main{
-	
+	&.col-md-9{
+
+		@include media-breakpoint-only(md) {
+			
+			flex: 0 0 (100% - 36%);
+			max-width: (100% - 36%); 
+		}
+	}
 	@include media-breakpoint-up(xl) {
 			padding-left: 9%;
 		}

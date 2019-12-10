@@ -1,18 +1,29 @@
-mixin s-about()
+mixin s-about(not)
 	// start s-about
-	+b.SECTION.s-about.section#s-about&attributes(attributes)
+	+b.s-about.section#s-about&attributes(attributes)
+		mixin btn()
+			if !not
+				a.col-aside__btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
+					+icon("arrow-right")
+			else
+				a.col-aside__btn(href="#"  ) К списку услуг
+					+icon("arrow-right")
 		.container
-			+b.section-title
-				h2 О бюро
+			if !not
+				+b.section-title
+					h2 О бюро
 				
 			.row
 				+b.col-aside.col-md-3
 					+e.inner
-						p Perevod.ru&nbsp;&mdash; бюро переводов широкого профиля.
-						p Мы&nbsp;оказываем услуги по&nbsp;письменному и&nbsp;устному переводу, а&nbsp;также ряд дополнительных услуг по&nbsp;редактированию, форматированию и&nbsp;верстке переведенных текстов, нотариальному заверению переводов, и&nbsp;озвучиванию аудио- и&nbsp;видеоматериалов
+						if !not
+							p Perevod.ru&nbsp;&mdash; бюро переводов широкого профиля.
+							p Мы&nbsp;оказываем услуги по&nbsp;письменному и&nbsp;устному переводу, а&nbsp;также ряд дополнительных услуг по&nbsp;редактированию, форматированию и&nbsp;верстке переведенных текстов, нотариальному заверению переводов, и&nbsp;озвучиванию аудио- и&nbsp;видеоматериалов
+						else
+							p Бюро переводов &laquo;Perevod.Ru&raquo; работает на&nbsp;рынке переводческих услуг с&nbsp;2000 года.
+							p За&nbsp;это время мы&nbsp;сумели накопить изрядный опыт в&nbsp;данной сфере деятельности, который позволяет нам решать практически любые задачи, связанные с&nbsp;переводом информации с&nbsp;одного языка на&nbsp;другой.
 						.d-none.d-md-block
-							+e.btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
-									+icon("arrow-right")
+							+btn
 				.col-main.col
 					.row
 						mixin col(i,t)
@@ -38,6 +49,5 @@ mixin s-about()
 							+e.text Бесплатное выполнение тестовых переводов*
 							.small * Уточняйте у менеджера
 					.d-md-none
-						a.col-aside__btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
-								+icon("arrow-right")
+						+btn()
 	// end s-about

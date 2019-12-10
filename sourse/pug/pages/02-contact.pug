@@ -8,16 +8,17 @@ include ../blocks/s-servises/_s-servises.pug
 include ../blocks/s-langs/_s-langs.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= "page-body"
 block title
 	- let  title= 'Контакты'
 	title= title
 block pagecontent 
 	+mob-mnu()
 	+header()
-		+top-line()
+		+top-line("t")
+			
 		+top-nav()
-		+header-block()
+	+page-head("Главная",title)
 	//- +s-about
 	//- +s-servises
 	//- +s-langs
