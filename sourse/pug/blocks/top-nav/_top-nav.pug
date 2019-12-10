@@ -7,11 +7,15 @@ mixin mob-mnu()
 			span
 		+e.inner
 			+mnu2()
-			+col-main()
+			+col-main("t")
 			a.top-line__modal-link(href="#")
 				img.res-i(src="img/svg/mail_icon.svg", alt="")
 				div Обратная связь
-	
+mixin lang()
+	+e.lang&attributes(attributes)
+		a.active(href="#") Ru
+		span /
+		a(href="#") Eng
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
@@ -23,9 +27,6 @@ mixin top-nav()
 					.row
 						.col
 							+mnu2()
-						+e.lang.col-auto
-							a.active(href="#") Ru
-							span /
-							a(href="#") Eng
-					
+						+lang()(class="col-auto d-none d-lg-block")
+						+tel-block()(class="col-auto d-lg-none")
 	// end top-nav

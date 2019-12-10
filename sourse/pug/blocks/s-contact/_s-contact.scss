@@ -14,7 +14,7 @@
     // padding-top: rem(1);
   }
   .icon-contact-car {
-    font-size: rem(9);
+    font-size: rem(10);
   }
   .swiper-slide {
     margin-right: rem(35);
@@ -23,6 +23,9 @@
     @include media-breakpoint-down(md) {
       letter-spacing: 0;
     }
+  }
+  .tabs__text{
+    padding-top: rem(2);
   }
   .tabs__link {
     display: inline-flex;
@@ -51,17 +54,21 @@
     // line-height: rem(28);
     // vertical-align: middle;
     height: rem(28);
+    // line-height: rem(22);
+    // vertical-align: middle;
     border-radius: 1px;
     margin-right: rem(15);
-    // display: block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 
-    flex-shrink: 0;
-    max-width: rem(320);
+    flex-shrink: 0; 
     // padding: 0;
     padding-top: rem(1);
+    .icon{
+      @include a-cent;
+    }
   }
   .map-wrap {
     margin-top: rem(10);
