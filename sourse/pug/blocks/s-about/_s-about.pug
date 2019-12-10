@@ -1,12 +1,12 @@
 mixin s-about(not)
 	// start s-about
-	+b.SECTION.s-about.section#s-about&attributes(attributes)
+	+b.s-about.section#s-about&attributes(attributes)
 		mixin btn()
 			if !not
-				.col-aside__btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
+				a.col-aside__btn.link-modal(href="#modal-call" data-title="Бесплатная консультация"  data-order="Бесплатная консультация") Узнать больше
 					+icon("arrow-right")
 			else
-				.col-aside__btn(href="#"  ) К списку услуг
+				a.col-aside__btn(href="#"  ) К списку услуг
 					+icon("arrow-right")
 		.container
 			if !not
