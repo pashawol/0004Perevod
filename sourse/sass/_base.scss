@@ -39,7 +39,9 @@ html {
 	@include bgs; 
 		padding-top: rem(40px);
 		padding-bottom: rem(40px); 
+		// @include media-breakpoint-down(xs)
 }
+
 .container .container{
 	padding-left: 0;
 	padding-right: 0;

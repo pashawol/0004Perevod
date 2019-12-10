@@ -36,7 +36,11 @@
 
 
 .page-head{
-	padding-top: rem(60);
+	@include media-breakpoint-up(md) {
+
+		padding-top: rem(60);
+	}
+	padding-top: rem(20);
 	// padding-bottom: rem(70);
 	.breadcrumb{
 		padding-bottom:  rem(6);
@@ -46,6 +50,10 @@
 		font-weight: bold;
 	}
 	+ .section{
-		padding-top: rem(30);
+		@include media-breakpoint-up(md) {
+
+			padding-top: rem(30);
+		}
+		padding-top: rem(10);
 	}
 }

@@ -6,8 +6,11 @@
 			padding-top: rem(100);
 			padding-bottom: rem(94);
 		}
-		padding-top: rem(100 * 7 /10);
-		padding-bottom: rem(78 * 7 /10);
+		@include media-breakpoint-up(md) {
+
+			padding-top: rem(100 * 7 /10);
+			padding-bottom: rem(78 * 7 /10);
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
