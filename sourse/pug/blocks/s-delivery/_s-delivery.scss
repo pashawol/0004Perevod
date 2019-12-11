@@ -1,11 +1,10 @@
-
 	// start .s-delivery
 	.s-delivery {
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(50);
 		}
 		h3 {
-			font-weight: 400;
+			font-weight: 600;
 			margin-bottom: rem(20);
 		}
 	.payment-item {
@@ -22,6 +21,12 @@
 		justify-content: space-between;
 		float: left;
 		margin-right: rem(35);
+		@include media-breakpoint-down(md) {
+			margin-right: rem(15);
+		}
+		@include media-breakpoint-down(md) {
+			margin-right: rem(15);
+		}
 		img {
 			width: rem(65);
 		}
@@ -40,7 +45,13 @@
 		}
 	}
 	.question {
-		padding: rem(38) rem(50) rem(30);
+		padding: rem(36) rem(50) rem(30);
+		@include media-breakpoint-down(lg){
+			padding: rem(26) rem(17) rem(26) rem(35);
+		}
+		@include media-breakpoint-down(md){
+			padding-left: rem(17);
+		}
 		font-size: $h5-font-size;
 		font-weight: 400;
 		span {
