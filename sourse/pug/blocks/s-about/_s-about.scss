@@ -6,7 +6,9 @@
 			padding-top: rem(100);
 			padding-bottom: rem(78);
 		}
+		@include media-breakpoint-up(sm) {
 		padding-top: rem(100 * 7 /10);
+		}
 		padding-bottom: rem(78 * 7 /10);
 
 		 &__col{

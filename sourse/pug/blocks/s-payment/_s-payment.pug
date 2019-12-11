@@ -3,14 +3,14 @@ mixin s-payment()
 
 	+b.s-payment.section.block-with-lazy#s-payment&attributes(attributes)
 		.container 
-			h3 Оплата
+			h2 Оплата
 			+b.tabs
 				+e.slider--js.swiper-container
 					+e.caption.swiper-wrapper
-						+e.btn.swiper-slide Для физических лиц
-						+e.btn.swiper-slide.active Для юридических лиц
+						+e.btn.swiper-slide.active Для физических лиц
+						+e.btn.swiper-slide Для юридических лиц
 				+e.wrapper
-					+e.content
+					+e.content.active
 						.row
 							.col-md-4
 								.payment-item
@@ -55,7 +55,7 @@ mixin s-payment()
 									+e.btn-modal.link-modal(href="#modal-q" data-title="Задать вопрос"  data-order="Задать вопрос") Задать вопрос
 										+icon("arrow-right")
 					//- Для юридических лиц
-					+e.content.active.legal-entities
+					+e.content.legal-entities
 						.row
 							.col-md-8
 								.row
