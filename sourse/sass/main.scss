@@ -39,9 +39,16 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
   font-size: $small;
+  &.swiper-wrapper{
+    flex-wrap: nowrap;
+  }
+  &-item{
+    width: auto;
+  }
   a{
     opacity: 0.3;
     color: $breadcrumb-active-color; 
+    text-decoration: none !important;
     &:hover{
       opacity: 1;
     }

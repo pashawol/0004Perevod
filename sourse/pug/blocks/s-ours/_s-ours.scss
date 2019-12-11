@@ -2,7 +2,11 @@
 	// start .s-ours
 	.s-ours {
 		color: #ffffff;
-		 background-image: url(../img/@2x/servises-bg.jpg);
+		@include media-breakpoint-up(sm) {
+
+			background-image: url(../img/@2x/servises-bg.jpg);
+		}
+		background-image: url(../img/@2x/servises-bg-mob.jpg);
 		 @include media-breakpoint-up(md) {
 
 			 padding-top: rem(110);

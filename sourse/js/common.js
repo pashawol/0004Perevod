@@ -236,7 +236,17 @@ function eventHandler() {
 	$(document).on('click', ".footer__title", function(){
 		$(this).toggleClass("active").next().slideToggle();
 	})
-	var breadSl = new Swiper('.tabs__slider--js', {
+
+		
+	var breadSl = new Swiper('.breadcrumb-slider-js', {
+		slidesPerView: 'auto',
+		// spaceBetween: 30,
+		freeMode: true, 
+		freeModeMomentum: true,
+		// spaceBetween: 30, 
+		watchOverflow: true,  
+	});
+	var tabsSl = new Swiper('.tabs__slider--js', {
 		slidesPerView: 'auto',
 		spaceBetween: 10,
 		freeMode: true, 
@@ -252,7 +262,7 @@ function eventHandler() {
 		}
 	});
 	
-	var breadSl2 = new Swiper('.s-patners__slider--js', {
+	var partnersSl2 = new Swiper('.s-patners__slider--js', {
 		 
 		slidesPerColumn: 1,
 		spaceBetween: 20,
