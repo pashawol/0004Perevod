@@ -35,6 +35,11 @@
 		&__text{
 			font-weight: 500;
 			line-height: 1.25;
+			a{
+				color: $primary !important;
+				border-bottom: 1px solid ;
+				text-decoration: none !important;
+			}
 		}
 
 		&__row-wrap{
