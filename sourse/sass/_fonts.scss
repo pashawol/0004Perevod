@@ -2,7 +2,7 @@
 $default-font: "Franklin Gothic";
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
-$file-format: woff2 woff ttf;
+$file-format: woff2;
 
 @include font-face ($default-font, $addr + "FranklinGothic-Medium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "FranklinGothic-Demi", 600, $file-formats: $file-format);

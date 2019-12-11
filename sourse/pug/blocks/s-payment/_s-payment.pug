@@ -1,0 +1,91 @@
+mixin s-payment()
+	// start s-payment
+
+	+b.s-payment.section.block-with-lazy#s-payment&attributes(attributes)
+		.container 
+			h3 Оплата
+			+b.tabs
+				+e.slider--js.swiper-container
+					+e.caption.swiper-wrapper
+						+e.btn.swiper-slide Для физических лиц
+						+e.btn.swiper-slide.active Для юридических лиц
+				+e.wrapper
+					+e.content
+						.row
+							.col-md-4
+								.payment-item
+									.img-wrap
+										img.lazy(src="#" data-src=`img/svg/delivery-i-1.svg`, alt="indefinite")
+									.text
+										span Оплата наличными
+										p Оплата наличными производится в&nbsp;рублях&nbsp;РФ или в&nbsp;условных единицах (евро, доллары США). Пересчет из&nbsp;одной валюты в&nbsp;другую осуществляется по&nbsp;текущему курсу ЦБ&nbsp;РФ + 1%
+							.col-md-4
+								.payment-item
+									.img-wrap
+										img.lazy(src="#" data-src=`img/svg/delivery-i-6.svg`, alt="indefinite")
+									.text
+										span Перевод на карту Сбербанка
+										p Номер карты вышлем по запросу
+							.col-md-4
+								.payment-item
+									.img-wrap
+										img.lazy(src="#" data-src=`img/svg/delivery-i-7.svg`, alt="indefinite")
+									.text
+										span Через систему денежных переводов
+										p MoneyGram, Western Union, Контакт, Юнистрим, PayPal и&nbsp;др. Оплата возможна в&nbsp;рублях&nbsp;РФ, евро, долларах США. Пересчет из&nbsp;одной валюты в&nbsp;другую осуществляется по&nbsp;текущему курсу ЦБ&nbsp;РФ + 1%
+							.col-md-4
+								.payment-item
+									.img-wrap
+										img.lazy(src="#" data-src=`img/svg/delivery-i-2.svg`, alt="indefinite")
+									.text
+										span Квитанцией через Сбербанк
+										p Мы&nbsp;высылаем Вам форму платежно- го&nbsp;поручения с&nbsp;уже &laquo;вбитыми&raquo; реквизитами, Вы&nbsp;можете оплатить ее&nbsp;в&nbsp;любом отделении банка, принимающего платежи от&nbsp;физических лиц. Имейте в&nbsp;виду, при приеме платежа банк берет свою комиссию в&nbsp;дополнение к&nbsp;стоимости перевода
+							.col-md-4
+								.payment-item
+									.img-wrap
+										img.lazy(src="#" data-src=`img/svg/delivery-i-8.svg`, alt="indefinite")
+									.text
+										span На валютный счет (для нерезидентов)
+										p Банковские реквизиты для оплаты вышлем по&nbsp;запросу
+							.col-md-4
+								+e.head
+									.question
+										span Остались вопросы?
+										p Мы&nbsp;будем рады ответить на&nbsp;ваши вопросы касательно наших услуг
+									+e.btn-modal.link-modal(href="#modal-q" data-title="Задать вопрос"  data-order="Задать вопрос") Задать вопрос
+										+icon("arrow-right")
+					//- Для юридических лиц
+					+e.content.active.legal-entities
+						.row
+							.col-md-8
+								.row
+									.col-md-12
+										.payment-item
+											.img-wrap
+												img.lazy(src="#" data-src=`img/svg/delivery-i-1.svg`, alt="indefinite")
+											.text
+												span Оплата наличными
+												p Оплата наличными производится в&nbsp;рублях&nbsp;РФ или в&nbsp;условных единицах (евро, доллары США). Пересчет из&nbsp;одной валюты в&nbsp;другую осуществляется по&nbsp;текущему курсу ЦБ&nbsp;РФ&nbsp;+1%. Выписываем квитанцию к&nbsp;приходному ордеру на&nbsp;сумму оплаты. Можно также оформить закрывающие документы&nbsp;&mdash; договор на&nbsp;оказание услуг по&nbsp;переводу, акт выполненных работ
+									.col-md-6
+										.payment-item
+											.img-wrap
+												img.lazy(src="#" data-src=`img/svg/delivery-i-2.svg`, alt="indefinite")
+											.text
+												span Безналичный расчет в&nbsp;валюте (доллары США, евро)
+												p Для нерезидентов. По&nbsp;желанию клиента делаем закрывающие документы на&nbsp;английском языке&nbsp;&mdash; инвойс, акт выполненных работ
+									.col-md-6
+										.payment-item
+											.img-wrap
+												img.lazy(src="#" data-src=`img/svg/delivery-i-3.svg`, alt="indefinite")
+											.text
+												span Безналичный расчет в&nbsp;рублях&nbsp;РФ
+												p При оплате по&nbsp;безналу делаем все необходимые закрывающие доку менты&nbsp;&mdash; договор на&nbsp;оказание услуг по&nbsp;переводу, акт выполненных работ, счет
+								//- Блок с вопросами
+							.col-md-4
+								+e.head
+									.question
+										span Остались вопросы?
+										p Мы&nbsp;будем рады ответить на&nbsp;ваши вопросы касательно наших услуг
+									+e.btn-modal.link-modal(href="#modal-q" data-title="Задать вопрос"  data-order="Задать вопрос") Задать вопрос
+										+icon("arrow-right")
+	// end s-payment
