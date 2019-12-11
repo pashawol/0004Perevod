@@ -11,7 +11,7 @@ mixin s-delivery()
 				+e.wrapper
 					+e.content
 						.row
-							.col-lg-4
+							.col-md-4
 								.payment-item
 									.img-wrap
 										img.lazy(src="#" data-src=`img/svg/delivery-i-9.svg`, alt="indefinite")
@@ -24,7 +24,7 @@ mixin s-delivery()
 									.text
 										span Доставка почтой
 										p Мы&nbsp;можем отправить вам перевод заказным письмом через Почту России (стоимость отправки зависит от&nbsp;веса письма в&nbsp;граммах, в&nbsp;среднем 200-300&nbsp;р., время доставки примерно неделя)
-							.col-lg-4
+							.col-md-4
 								.payment-item
 									.img-wrap
 										img.lazy(src="#" data-src=`img/svg/delivery-i-10.svg`, alt="indefinite")
@@ -32,7 +32,7 @@ mixin s-delivery()
 										span Доставка курьером
 										p Мы&nbsp;можем отправить вам перевод курьерской службой (доставка по&nbsp;Москве от&nbsp;350&nbsp;р.&nbsp;в&nbsp;день готовности перевода или на&nbsp;следующий день, в&nbsp;другие города надо уточнять на&nbsp;сайте соответствующей курьерской службы)
 							//- Блок с вопросами
-							.col-lg-4
+							.col-md-4
 								+e.head
 									.question
 										span Остались вопросы?
@@ -41,14 +41,14 @@ mixin s-delivery()
 										+icon("arrow-right")
 					+e.content.active.electronic-version
 						.row
-							.col-lg-4
+							.col-md-4
 								.payment-item
 									.img-wrap
 										img.lazy(src="#" data-src=`img/svg/delivery-i-4.svg`, alt="indefinite")
 									.text
 										span По e-mail
 										p По&nbsp;электронной почте (включая сканы заверенных переводов, которые мы&nbsp;делаем бесплатно по&nbsp;желанию заказчика)
-							.col-lg-4
+							.col-md-4
 								.payment-item
 									.img-wrap
 										img.lazy(src="#" data-src=`img/svg/delivery-i-5.svg`, alt="indefinite")
@@ -56,7 +56,7 @@ mixin s-delivery()
 										span По WhatsApp
 										p Номер телефона&nbsp;8 (916) 657-88-39
 							//- Блок с вопросами
-							.col-lg-4
+							.col-md-4
 								+e.head
 									.question
 										span Остались вопросы?
