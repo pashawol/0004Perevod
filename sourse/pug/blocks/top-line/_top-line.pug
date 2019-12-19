@@ -1,23 +1,19 @@
 mixin tel-block()
-	div&attributes(attributes)
-		.row
-			+e.sm-col.col-md-auto.text-center
-				+e.tel.small(href="tel:8(916)657-88-39") 8 (916) 657-88-39
-			+e.sm-col.col-md-auto.text-center
-				+e.tel.small(href="tel:8(495)789-68-40") 8 (495) 789-68-40 (доб.550)
-mixin col-main(t)
+	+b.tel-block&attributes(attributes)
+		+e.link(href="tel:8(916)657-88-39") 8 (916) 657-88-39
+		br
+		+e.link(href="tel:8(495)789-68-40") 8 (495) 789-68-40 (доб.&nbsp;500&nbsp;или&nbsp;501)
+mixin col-main()
 	+e.col.col-main.col&attributes(attributes)
 		.row
 			.col
-				+mnu()
-			if t
-				.col-auto.d-lg-none.d-md-block.d-none
-					+e.modal-link(href="#") 
-						img.res-i(src="img/svg/mail_icon.svg", alt="")
-				
-				+lang()(class="col-auto d-lg-none d-md-block d-none")
+				+mnu() 
+			+lang()(class="col-auto")
+			.col-auto
+				+e.modal-link--main(href="#") 
+					img.res-i(src="img/svg/mail_icon.svg", alt="") 
+					.d-none.d-lg-inline Обратная связь
 			 
-			+tel-block()(class="col-md-auto d-none d-lg-block")
 mixin top-line(t)
 	// start .top-line
 	+b.top-line.block-with-lazy
@@ -30,10 +26,11 @@ mixin top-line(t)
 						+e.logo
 							a(href="#"): img.res-i(src="img/svg/logo.svg", alt="")
 						block
-						div.d-none.d-md-block
-							+e.modal-link(href="#")
-								img.res-i(src="img/svg/mail_icon.svg", alt="")
-								div Обратная связь
+						
+						//- div.d-none.d-md-block
+						//- 	+e.modal-link(href="#")
+						//- 		img.res-i(src="img/svg/mail_icon.svg", alt="")
+						//- 		div Обратная связь
 
 				+col-main(t)(class="top-line__col--line d-none d-md-block")
 	// end .top-line

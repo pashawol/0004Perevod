@@ -6,15 +6,23 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-			+mnu2()
-			+col-main("t")
+			+lang()
+			+e.logo
+				a(href="#")
+					img.res-i(src="img/svg/logo-light.svg", alt="")
+			.menu-accordion
+				+aside-mnu()
+			+mnu()
+			//- +col-main("t")
+			+b.tel-block&attributes(attributes)
+			+tel-block()
 			a.top-line__modal-link(href="#")
 				img.res-i(src="img/svg/mail_icon.svg", alt="")
 				div Обратная связь
 mixin lang()
 	+e.lang&attributes(attributes)
-		a.active(href="#") Ru
-		span /
+		a.active(href="#") Ru 
+		span / 
 		a(href="#") Eng
 	//  мобильное меню
 mixin top-nav() 
@@ -27,6 +35,9 @@ mixin top-nav()
 					.row
 						.col
 							+mnu2()
-						+lang()(class="col-auto d-none d-lg-block")
-						+tel-block()(class="col-auto d-lg-none")
+						+e.tel-col.col-auto
+							+e.tel(href="tel:100-100-100")
+								+icon('call')
+						//- +lang()(class="col-auto d-none d-lg-block")
+						//- +tel-block()(class="col-auto d-lg-none")
 	// end top-nav

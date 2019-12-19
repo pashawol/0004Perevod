@@ -123,13 +123,6 @@ var JSCCommon = {
 	inputMask: function inputMask() {
 		// mask for input
 		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	},
-	dropFile: function dropFile(div) {
-		if (div) {
-			var myDropzone = new Dropzone(div, {
-				url: "/file/post"
-			});
-		}
 	}
 };
 
@@ -144,28 +137,10 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
-	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Perevod_1140_delivery-.jpg);"></div>')
-	// /добавляет подложку для pixel perfect
-	// const url = document.location.href;
-	// $.each($(".top-nav__nav a "), function() {
-	// 	if (this.href == url) {
-	// 		if ($(this).hasClass("top-nav__link") == true) {
-	// 			$(this).addClass('top-nav__link-active');
-	// 		}
-	// 		if ($(this).hasClass("footer__link") == true) {
-	// 			$(this).addClass('footer__link-active');
-	// 		} 
-	// 	}; 
-	// }); 
-	// /закрыть/открыть мобильное меню
+	JSCCommon.inputMask(); // /закрыть/открыть мобильное меню
 
 	function heightses() {
-		var w = $(window).width(); // $(".main-wrapper").css("margin-bottom", $('footer').height())
-		// $(".otz__item .text-wrap ").height('auto').equalHeights();
-		// 
-		// скрывает моб меню
+		var w = $(window).width(); // скрывает моб меню
 
 		var topH = $("header ").innerHeight();
 		$(window).scroll(function () {
@@ -237,9 +212,20 @@ function eventHandler() {
 			}
 		}
 	});
+	$(".menu-accordion li, .s-detailed .col-aside__inner  li li li li").each(function () {
+		var _this = $(this);
+
+		if (_this.children("ul").length > 0) {
+			_this.addClass("accordion-list").append('<div class="toggle-list"></div>');
+		}
+	});
 }
 
 ;
+$(document).on('click', '.toggle-list', function () {
+	$(this).toggleClass("active").prev().slideToggle();
+	return false;
+});
 
 if (document.readyState !== 'loading') {
 	eventHandler();

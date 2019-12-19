@@ -1,32 +1,37 @@
 .modal-win {
-	display: block;
+	// display: block;
 	position: relative;
 	padding: rem(47) rem(38) 0;
 	max-width: rem(380px);
 	width: 100%;
 	overflow: initial;
-	.fancybox-close-small{
+
+	.fancybox-close-small {
 		@extend .btn-primary;
 		position: absolute;
 		// right: -40px;
 		padding: rem(10);
 		height: rem(47);
 		width: rem(47);
+
 		@include media-breakpoint-up(md) {
 
 			left: 100%;
 		}
+
 		opacity: 1;
 	}
+
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
 	}
+
 	.mfp-close {
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
-	}   
+	}
 }
 
 a {
@@ -79,12 +84,13 @@ a {
 	margin-top: -5px;
 	margin-right: -5px;
 	@include mt;
+
 	&:hover {
 		// background-color: #e3f3f6;
 	}
 }
 
-@include media-breakpoint-up(sm) { 
+@include media-breakpoint-up(sm) {
 	.modal-text {
 		max-width: 1000px;
 	}
@@ -95,6 +101,7 @@ a {
 		color: $primary;
 		cursor: pointer;
 		text-decoration: underline;
+
 		:hover {
 			display: none;
 		}

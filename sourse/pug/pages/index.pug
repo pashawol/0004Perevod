@@ -16,7 +16,10 @@ block pagecontent
 	+mob-mnu()
 	+header()
 		+top-line()
-			+col-main()(class="top-line__col--row")
+			// блок только на главной
+			+tel-block()(class="d-none d-md-block")
+			// /блок только на главной
+			//- +col-main()(class="top-line__col--row")
 		+top-nav()
 		+header-block()
 	+s-about
