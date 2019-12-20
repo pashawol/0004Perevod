@@ -14,7 +14,7 @@ mixin col-main()
 					img.res-i(src="img/svg/mail_icon.svg", alt="") 
 					.d-none.d-lg-inline Обратная связь
 			 
-mixin top-line(t)
+mixin top-line(main)
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
@@ -25,12 +25,15 @@ mixin top-line(t)
 					+e.aside
 						+e.logo
 							a(href="#"): img.res-i(src="img/svg/logo.svg", alt="")
-						block
+						// блок только на главной
+							+tel-block()(class="d-none d-md-block")
+							// /блок только на главной
 						
 						//- div.d-none.d-md-block
 						//- 	+e.modal-link(href="#")
 						//- 		img.res-i(src="img/svg/mail_icon.svg", alt="")
 						//- 		div Обратная связь
 
-				+col-main(t)(class="top-line__col--line d-none d-md-block")
+				+col-main()(class="top-line__col--line d-none d-md-block")
+		block
 	// end .top-line

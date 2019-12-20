@@ -1,3 +1,9 @@
+.main-page .top-nav {
+	.col-main::before {
+		display: none;
+	}
+}
+
 .main-page .top-nav__tel-col {
 	display: none;
 }
@@ -53,10 +59,11 @@
 	left: 0;
 	// top: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 13;
 
 	a {
 		text-decoration: none !important;
+		text-align: center;
 	}
 
 	ul {
@@ -120,6 +127,10 @@
 
 	.row {
 		align-items: center;
+	}
+
+	&__item {
+		text-align: center;
 	}
 
 	&__tel {

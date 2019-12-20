@@ -15,12 +15,10 @@ block title
 block pagecontent 
 	+mob-mnu()
 	+header()
-		+top-line()
-			// блок только на главной
-			+tel-block()(class="d-none d-md-block")
-			// /блок только на главной
+		+top-line(title)
+			
 			//- +col-main()(class="top-line__col--row")
-		+top-nav()
+			+top-nav()
 		+header-block()
 	+s-about
 	+s-servises

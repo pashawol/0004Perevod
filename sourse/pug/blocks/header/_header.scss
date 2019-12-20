@@ -1,5 +1,7 @@
-.header{
-	background-color: #f5f1ee;
+.header {
+
+  background-color: #f5f1ee;
+
   // 
   @include media-breakpoint-up(xl) {}
 
@@ -35,4 +37,4 @@
   @include media-breakpoint-down(sm) {}
 
   @include media-breakpoint-down(xs) {}
- }
+}

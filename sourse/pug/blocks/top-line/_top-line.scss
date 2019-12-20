@@ -153,19 +153,21 @@
       }
     }
 
-    a {
-      @extend .text-body;
-      font-weight: 500;
-      line-height: 1.13;
-      display: block;
+  }
 
-      @include media-breakpoint-up(lg) {
+  &__nav a {
+    @extend .text-body;
+    font-weight: 500;
+    line-height: 1.13;
+    display: block;
+    text-align: center;
 
-        padding-top: rem(13);
-        padding-bottom: rem(13);
-      }
+    @include media-breakpoint-up(lg) {
 
+      padding-top: rem(13);
+      padding-bottom: rem(13);
     }
+
   }
 
   &__tel {
