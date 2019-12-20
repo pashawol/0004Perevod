@@ -65,6 +65,7 @@
 
   .col-aside {
     position: relative;
+    z-index: 15;
 
     @include media-breakpoint-only(md) {
 
