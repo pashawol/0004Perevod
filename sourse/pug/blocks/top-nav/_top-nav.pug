@@ -3,13 +3,14 @@ mixin mob-mnu()
 	//- +b.toggle-menu-mobile--js.d-lg-none
 	//- 	span
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
-			+lang()
-			+e.logo
-				a(href="#")
-					img.res-i(src="img/svg/logo-light.svg", alt="")
+			+e.head
+				+lang()
+				+e.logo
+					a(href="#")
+						img.res-i(src="img/svg/logo-light.svg", alt="")
+				+b.toggle-menu-mobile--js
+					span
 			.menu-accordion
 				+aside-mnu()
 			+mnu()

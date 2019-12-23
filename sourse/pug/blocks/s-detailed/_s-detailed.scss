@@ -18,10 +18,27 @@
 
 	&__content {
 
-		ul,
+
 		ol {
 
 			padding-left: rem(18);
+		}
+
+		ul {
+			padding-left: 0;
+			list-style-type: none;
+
+			li {
+				position: relative;
+				padding-left: rem(18);
+
+				&::before {
+					content: '•';
+					position: absolute;
+					left: 0;
+
+				}
+			}
 		}
 
 		a {
